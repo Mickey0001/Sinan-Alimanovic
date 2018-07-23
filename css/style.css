@@ -1,5 +1,5 @@
 .carousel-item {
-  height:90.5vh;
+  height:100vh;
   background: #212121;
   width:100%;
 }
@@ -24,7 +24,9 @@
     font-size: 72px;
     padding: 0 10%;
  }
-
+body{
+  font-family: "Times New Roman", Times, serif;
+}
 body, a{
   color: #F5F5DC;
 }
