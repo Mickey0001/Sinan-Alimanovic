@@ -1,0 +1,34 @@
+.carousel-item {
+  height:90.5vh;
+  background: #212121;
+  width:100%;
+}
+.carousel-image{
+  width: 100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 8% !important;
+}
+
+.carousel-item.active,
+.carousel-item-left,
+.carousel-item-right {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item h1 {
+    color: #fff;
+    font-size: 72px;
+    padding: 0 10%;
+ }
+
+body, a{
+  color: #F5F5DC;
+}
+
+ .navbar-expand-lg {
+  background: rgba(0,50,100);
+}
