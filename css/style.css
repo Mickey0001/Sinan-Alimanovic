@@ -1,7 +1,6 @@
 .carousel-item {
   height:100vh;
   background: #212121;
-  width:100%;
 }
 .carousel-image{
   width: 100%;
@@ -26,11 +25,25 @@
  }
 body{
   font-family: "Times New Roman", Times, serif;
+  color: #F5F5DC;
 }
 body, a{
   color: #F5F5DC;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+a:hover{
+  text-shadow: 2px 2px black;
 }
 
  .navbar-expand-lg {
   background: rgba(0,50,100);
+}
+.carousel-caption{
+  left: 0%;
+  top: 20%;
+  right: 0%;
+  font-weight: bold;
+  font-size: 50px;
+  text-shadow: 1px 1px #000;
 }
