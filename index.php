@@ -6,15 +6,15 @@
     <!-- The slideshow -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="carousel-image" src="images/Sinan1.jpg" alt="Sinan Alimanovic">
+        <img class="carousel-image" src="http://localhost/Sinan/wp-content/themes/Sinan-Alimanovic/images/Sinan1.jpg" alt="Sinan Alimanovic">
+        <h2 class="carousel-caption">Sinan <br> Alimanovic</h2>
+      </div>
+      <div class="carousel-item">
+        <img class="carousel-image" src="http://localhost/Sinan/wp-content/themes/Sinan-Alimanovic/images/Sinan2.jpg" alt="Sinan Alimanovic">
         <h2 class="carousel-caption">Sinan <br> Alimanovic</h2 >
       </div>
       <div class="carousel-item">
-        <img class="carousel-image" src="images/Sinan2.jpg" alt="Sinan Alimanovic">
-        <h2 class="carousel-caption">Sinan <br> Alimanovic</h2 >
-      </div>
-      <div class="carousel-item">
-       <img class="carousel-image" src="images/Sinan3.jpg" alt="Sinan Alimanovic">
+       <img class="carousel-image" src="http://localhost/Sinan/wp-content/themes/Sinan-Alimanovic/images/Sinan3.jpg" alt="Sinan Alimanovic">
        <h2 class="carousel-caption">Sinan <br> Alimanovic</h2 >
       </div>
     </div>

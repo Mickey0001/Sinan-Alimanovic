@@ -60,3 +60,6 @@ a:hover{
   text-shadow: 1px 1px #000;
   text-align: left;
 }
+.blog-footer{
+  background: rgba(0,50,100);
+}
