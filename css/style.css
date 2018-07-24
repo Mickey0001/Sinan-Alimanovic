@@ -40,10 +40,11 @@ a:hover{
   background: rgba(0,50,100);
 }
 .carousel-caption{
-  left: 0%;
-  top: 20%;
+  left: 1%;
+  top: 0%;
   right: 0%;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 4em;
   text-shadow: 1px 1px #000;
+  text-align: left;
 }
