@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="main-container">
   
-  <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div class="carousel-slide" data-ride="carousel" data-interval="false">
 
     <!-- The slideshow -->
     <div class="carousel-inner">
