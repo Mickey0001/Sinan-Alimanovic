@@ -13,4 +13,10 @@ function sinan_theme_setup()
 
 add_action('after_setup_theme', 'sinan_theme_setup');
 
+//Posts exceprt lenght control
+function set_excerpt_length()
+{
+  return 20;
+}
+
 ?>
