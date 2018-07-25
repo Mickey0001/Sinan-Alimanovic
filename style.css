@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 .carousel-item {
-  height:90vh;
+  height:100vh;
   background: #212121;
 }
 .carousel-image{
@@ -38,8 +38,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 html, body{
   font-family: "Times New Roman", Times, serif;
   color: #F5F5DC;
-  /* overflow: hidden; */
-  height: 100vh;
+  overflow: hidden;
+  height: 100%;
 }
 body, a{
   color: #F5F5DC;
@@ -68,6 +68,3 @@ a:hover{
   padding: 0.2%;
   text-align: center;
 }
-/* .navbar .navbar-expand-lg{
-  height: 10vh;
-} */
