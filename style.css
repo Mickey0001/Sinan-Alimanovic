@@ -39,6 +39,7 @@ html, body{
   font-family: "Times New Roman", Times, serif;
   color: #F5F5DC;
   /* overflow: hidden; */
+  height: 100vh;
 }
 body, a{
   color: #F5F5DC;
@@ -50,7 +51,7 @@ a:hover{
 }
 
  .navbar-expand-lg {
-  background: rgba(0,50,100);
+  background: rgb(0,50,100);
 }
 .carousel-caption{
   left: 1%;
@@ -62,7 +63,7 @@ a:hover{
   text-align: left;
 }
 .blog-footer{
-  background: rgba(0,50,100);
+  background: rgb(0,50,100);
   width: 100%;
   padding: 0.2%;
   text-align: center;
