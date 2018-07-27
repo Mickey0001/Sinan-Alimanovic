@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Astrid
+ * @package Sinan
  */
 
 ?>
@@ -16,7 +16,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="single-thumb">
-		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('astrid-large-thumb'); ?></a>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('sinan-large-thumb'); ?></a>
 	</div>	
 	<?php endif; ?>	
 
@@ -25,7 +25,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'astrid' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'sinan' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -36,7 +36,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'astrid' ),
+					esc_html__( 'Edit %s', 'sinan' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

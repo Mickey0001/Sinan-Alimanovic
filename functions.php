@@ -1,13 +1,13 @@
 <?php
 /**
- * Astrid functions and definitions.
+ * Sinan functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Astrid
+ * @package Sinan
  */
 
-if ( ! function_exists( 'astrid_setup' ) ) :
+if ( ! function_exists( 'sinan_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'astrid_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function astrid_setup() {
+function sinan_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Astrid, use a find and replace
-	 * to change 'astrid' to the name of your theme in all the template files.
+	 * If you're building a theme based on sinan, use a find and replace
+	 * to change 'sinan' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'astrid', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'sinan', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -41,17 +41,17 @@ function astrid_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size('astrid-large-thumb', 700);
-	add_image_size('astrid-medium-thumb', 520);
-	add_image_size('astrid-small-thumb', 360);
-	add_image_size('astrid-project-thumb', 500, 310, true);
-	add_image_size('astrid-client-thumb', 250);
-	add_image_size('astrid-testimonial-thumb', 100);
+	add_image_size('sinan-large-thumb', 700);
+	add_image_size('sinan-medium-thumb', 520);
+	add_image_size('sinan-small-thumb', 360);
+	add_image_size('sinan-project-thumb', 500, 310, true);
+	add_image_size('sinan-client-thumb', 250);
+	add_image_size('sinan-testimonial-thumb', 100);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' 	=> esc_html__( 'Primary', 'astrid' ),
-		'footer' 	=> esc_html__( 'Footer', 'astrid' ),
+		'primary' 	=> esc_html__( 'Primary', 'sinan' ),
+		'footer' 	=> esc_html__( 'Footer', 'sinan' ),
 	) );
 
 	/*
@@ -79,7 +79,7 @@ function astrid_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'astrid_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'sinan_custom_background_args', array(
 		'default-color' => 'f5f9f8',
 		'default-image' => '',
 	) ) );
@@ -91,7 +91,7 @@ function astrid_setup() {
 	) );	
 }
 endif;
-add_action( 'after_setup_theme', 'astrid_setup' );
+add_action( 'after_setup_theme', 'sinan_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -100,19 +100,19 @@ add_action( 'after_setup_theme', 'astrid_setup' );
  *
  * @global int $content_width
  */
-function astrid_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'astrid_content_width', 640 );
+function sinan_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'sinan_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'astrid_content_width', 0 );
+add_action( 'after_setup_theme', 'sinan_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function astrid_widgets_init() {
+function sinan_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'astrid' ),
+		'name'          => esc_html__( 'Sidebar', 'sinan' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -129,9 +129,9 @@ function astrid_widgets_init() {
 
 	foreach($pages as $page){
 		register_sidebar( array(
-			'name'          => esc_html__( 'Page - ', 'astrid' ) . $page->post_title,
+			'name'          => esc_html__( 'Page - ', 'sinan' ) . $page->post_title,
 			'id'            => 'widget-area-' . strtolower($page->post_name),
-			'description'   => esc_html__( 'Use this widget area to build content for the page: ', 'astrid' ) . $page->post_title,
+			'description'   => esc_html__( 'Use this widget area to build content for the page: ', 'sinan' ) . $page->post_title,
 			'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="atblock container">',
 			'after_widget'  => '</div></section>',
 			'before_title'  => '<h2 class="widget-title"><span class="title-decoration"></span>',
@@ -143,7 +143,7 @@ function astrid_widgets_init() {
 	$widget_areas = get_theme_mod('footer_widget_areas', '3');
 	for ($i=1; $i<=$widget_areas; $i++) {
 		register_sidebar( array(
-			'name'          => __( 'Footer ', 'astrid' ) . $i,
+			'name'          => __( 'Footer ', 'sinan' ) . $i,
 			'id'            => 'footer-' . $i,
 			'description'   => '',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -166,12 +166,12 @@ function astrid_widgets_init() {
 	register_widget( 'Atframework_Social' );	
 
 }
-add_action( 'widgets_init', 'astrid_widgets_init' );
+add_action( 'widgets_init', 'sinan_widgets_init' );
 
 //Homepage widgets
-$astrid_widgets = array('services', 'skills', 'facts', 'employees', 'projects', 'testimonials', 'clients', 'posts');
-foreach ( $astrid_widgets as $astrid_widget) {
-	locate_template( '/inc/framework/widgets/front-' . $astrid_widget . '.php', true, false );
+$sinan_widgets = array('services', 'skills', 'facts', 'employees', 'projects', 'testimonials', 'clients', 'posts');
+foreach ( $sinan_widgets as $sinan_widget) {
+	locate_template( '/inc/framework/widgets/front-' . $sinan_widget . '.php', true, false );
 }
 
 //Sidebar widgets
@@ -182,8 +182,8 @@ require get_template_directory() . "/inc/framework/widgets/social-widget.php";
 /**
  * Enqueue scripts and styles.
  */
-function astrid_scripts() {
-	wp_enqueue_style( 'astrid-style', get_stylesheet_uri() );
+function sinan_scripts() {
+	wp_enqueue_style( 'sinan-style', get_stylesheet_uri() );
 
 	$body_font 		= get_theme_mod('body_font_name', '//fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic');
 	$headings_font 	= get_theme_mod('headings_font_name', '//fonts.googleapis.com/css?family=Josefin+Sans:300italic,300');
@@ -191,54 +191,54 @@ function astrid_scripts() {
 	$body_url 		= str_replace($remove, '', $body_font);
 	$headings_url 	= str_replace($remove, '', $headings_font);	
 
-	wp_enqueue_style( 'astrid-body-fonts', esc_url($body_url) ); 
+	wp_enqueue_style( 'sinan-body-fonts', esc_url($body_url) ); 
 	
-	wp_enqueue_style( 'astrid-headings-fonts', esc_url($headings_url) ); 	
+	wp_enqueue_style( 'sinan-headings-fonts', esc_url($headings_url) ); 	
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.min.css' );	
 
-	wp_enqueue_script( 'astrid-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
+	wp_enqueue_script( 'sinan-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'astrid-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'sinan-scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	if ( astrid_blog_layout() == 'masonry-layout' && (is_home() || is_archive()) ) {
-		wp_enqueue_script( 'astrid-masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array('masonry'), '', true );		
+	if ( sinan_blog_layout() == 'masonry-layout' && (is_home() || is_archive()) ) {
+		wp_enqueue_script( 'sinan-masonry-init', get_template_directory_uri() . '/js/masonry-init.js', array('masonry'), '', true );		
 	}
 
-	wp_enqueue_script( 'astrid-html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '', true );
-    wp_script_add_data( 'astrid-html5shiv', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'sinan-html5shiv', get_template_directory_uri() . '/js/html5shiv.js', array(), '', true );
+    wp_script_add_data( 'sinan-html5shiv', 'conditional', 'lt IE 9' );
 
 }
-add_action( 'wp_enqueue_scripts', 'astrid_scripts' );
+add_action( 'wp_enqueue_scripts', 'sinan_scripts' );
 
 /**
  * Enqueue Bootstrap
  */
-function astrid_enqueue_bootstrap() {
+function sinan_enqueue_bootstrap() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.min.css', array(), true );
 }
-add_action( 'wp_enqueue_scripts', 'astrid_enqueue_bootstrap', 9 );
+add_action( 'wp_enqueue_scripts', 'sinan_enqueue_bootstrap', 9 );
 
 
 /**
  * Customizer styles
  */
-function astrid_customizer_styles($hook) {
+function sinan_customizer_styles($hook) {
     if ( ( 'customize.php' != $hook ) && ( 'widgets.php' != $hook ) ) {
         return;
     } 	
-	wp_enqueue_style( 'astrid-customizer-styles', get_template_directory_uri() . '/inc/framework/css/customizer.css' );	
+	wp_enqueue_style( 'sinan-customizer-styles', get_template_directory_uri() . '/inc/framework/css/customizer.css' );	
 }
-add_action( 'admin_enqueue_scripts', 'astrid_customizer_styles' );
+add_action( 'admin_enqueue_scripts', 'sinan_customizer_styles' );
 
 /**
  * Blog layout
  */
-function astrid_blog_layout() {
+function sinan_blog_layout() {
 	$layout = get_theme_mod('blog_layout','list');
 	return $layout;
 }
@@ -246,7 +246,7 @@ function astrid_blog_layout() {
 /**
  * Remove archives labels
  */
-function astrid_category_label($title) {
+function sinan_category_label($title) {
     if ( is_category() ) {
         $title = '<i class="fa fa-folder-o"></i>' . single_cat_title( '', false );
     } elseif ( is_tag() ) {
@@ -256,17 +256,17 @@ function astrid_category_label($title) {
 	}
     return $title;
 }
-add_filter('get_the_archive_title', 'astrid_category_label');
+add_filter('get_the_archive_title', 'sinan_category_label');
 
 /**
  * Header image check
  */
-function astrid_has_header() {
+function sinan_has_header() {
 	$front_header = get_theme_mod('front_header_type' ,'image');
 	$site_header = get_theme_mod('site_header_type', 'nothing');
 	global $post;
 	if ( !is_404() || !is_search() ) {
-		$single_toggle = get_post_meta( $post->ID, '_astrid_single_header_shortcode', true );
+		$single_toggle = get_post_meta( $post->ID, '_sinan_single_header_shortcode', true );
 	} else {
 		$single_toggle = false;
 	}
@@ -287,7 +287,7 @@ function astrid_has_header() {
 /**
  * Full width single posts
  */
-function astrid_fullwidth_singles($classes) {
+function sinan_fullwidth_singles($classes) {
 	if ( function_exists('is_woocommerce') ) {
 		$woocommerce = is_woocommerce();
 	} else {
@@ -300,24 +300,24 @@ function astrid_fullwidth_singles($classes) {
 	}
 	return $classes;
 }
-add_filter('body_class', 'astrid_fullwidth_singles');
+add_filter('body_class', 'sinan_fullwidth_singles');
 
 /**
  * Polylang compatibility
  */
 if ( function_exists('pll_register_string') ) :
-function astrid_polylang() {
-	pll_register_string('Header text', get_theme_mod('header_text'), 'Astrid');
-	pll_register_string('Header subtext', get_theme_mod('header_subtext'), 'Astrid');
-	pll_register_string('Header button', get_theme_mod('header_button'), 'Astrid');
+function sinan_polylang() {
+	pll_register_string('Header text', get_theme_mod('header_text'), 'sinan');
+	pll_register_string('Header subtext', get_theme_mod('header_subtext'), 'sinan');
+	pll_register_string('Header button', get_theme_mod('header_button'), 'sinan');
 }
-add_action( 'admin_init', 'astrid_polylang' );
+add_action( 'admin_init', 'sinan_polylang' );
 endif;
 
 /**
  * Header text
  */
-function astrid_header_text() {
+function sinan_header_text() {
 
 	if ( !function_exists('pll_register_string') ) {
 		$header_text 		= get_theme_mod('header_text');
@@ -344,8 +344,8 @@ function astrid_header_text() {
 /**
  * Site branding
  */
-if ( ! function_exists( 'astrid_branding' ) ) :
-function astrid_branding() {
+if ( ! function_exists( 'sinan_branding' ) ) :
+function sinan_branding() {
 	$site_logo = get_theme_mod('site_logo');	
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 		the_custom_logo();
@@ -365,8 +365,8 @@ endif;
 /**
  * Footer site branding
  */
-if ( ! function_exists( 'astrid_footer_branding' ) ) :
-function astrid_footer_branding() {
+if ( ! function_exists( 'sinan_footer_branding' ) ) :
+function sinan_footer_branding() {
 	$footer_logo = get_theme_mod('footer_logo');
 	echo '<div class="footer-branding">';
 	if ( $footer_logo ) :
@@ -381,8 +381,8 @@ endif;
 /**
  * Footer contact
  */
-if ( ! function_exists( 'astrid_footer_contact' ) ) :
-function astrid_footer_contact() {
+if ( ! function_exists( 'sinan_footer_contact' ) ) :
+function sinan_footer_contact() {
 	$footer_contact_address = get_theme_mod('footer_contact_address');
 	$footer_contact_email   = antispambot(get_theme_mod('footer_contact_email'));
 	$footer_contact_phone 	= get_theme_mod('footer_contact_phone');
@@ -414,36 +414,36 @@ endif;
 /**
  * Clearfix posts
  */
-function astrid_clearfix_posts( $classes ) {
+function sinan_clearfix_posts( $classes ) {
 	$classes[] = 'clearfix';
 	return $classes;
 }
-add_filter( 'post_class', 'astrid_clearfix_posts' );
+add_filter( 'post_class', 'sinan_clearfix_posts' );
 
 /**
  * Excerpt length
  */
-function astrid_excerpt_length( $length ) {
+function sinan_excerpt_length( $length ) {
   $excerpt = get_theme_mod('exc_length', '40');
   return absint($excerpt);
 }
-add_filter( 'excerpt_length', 'astrid_excerpt_length', 99 );
+add_filter( 'excerpt_length', 'sinan_excerpt_length', 99 );
 
 /**
 * Footer credits
 */
-function astrid_footer_credits() {
-	echo '<a href="' . esc_url( __( 'https://wordpress.org/', 'astrid' ) ) . '">';
-		printf( __( 'Powered by %s', 'astrid' ), 'WordPress' );
+function sinan_footer_credits() {
+	echo '<a href="' . esc_url( __( 'https://wordpress.org/', 'sinan' ) ) . '">';
+		printf( __( 'Powered by %s', 'sinan' ), 'WordPress' );
 	echo '</a>';
 	echo '<span class="sep"> | </span>';
-	printf( __( 'Theme: %2$s by %1$s.', 'astrid' ), 'aThemes', '<a href="http://athemes.com/theme/astrid" rel="designer">Astrid</a>' );
+	printf( __( 'Theme: %2$s by %1$s.', 'sinan' ), 'aThemes', '<a href="http://athemes.com/theme/sinan" rel="designer">sinan</a>' );
 }
-add_action( 'astrid_footer', 'astrid_footer_credits' );
+add_action( 'sinan_footer', 'sinan_footer_credits' );
 
-function astrid_remove_page_template() {
+function sinan_remove_page_template() {
 
-	if ( !function_exists('astrid_pro_load_widgets') ) {
+	if ( !function_exists('sinan_pro_load_widgets') ) {
 
 	    global $pagenow;
 	    if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
@@ -459,7 +459,7 @@ function astrid_remove_page_template() {
 	    }
 	}
 }
-add_action('admin_footer', 'astrid_remove_page_template', 10);
+add_action('admin_footer', 'sinan_remove_page_template', 10);
 
 /**
  * Implement the Custom Header feature.

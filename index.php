@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Astrid
+ * @package Sinan
  */
 
 get_header(); ?>

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Astrid
+ * @package Sinan
  */
 
 ?>
@@ -23,8 +23,8 @@
 		<?php if ( $toggle_contact ) : ?>
 		<div class="footer-info">
 			<div class="container">
-				<?php astrid_footer_branding(); ?>
-				<?php astrid_footer_contact(); ?>
+				<?php sinan_footer_branding(); ?>
+				<?php sinan_footer_contact(); ?>
 			</div>
 		</div>
 		<?php endif; ?>
