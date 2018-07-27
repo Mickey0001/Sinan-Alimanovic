@@ -3,8 +3,8 @@
 class Atframework_Video extends WP_Widget {
 
     public function __construct() {
-		$widget_ops = array('classname' => 'atframework_video_widget', 'description' => __( 'Display a video from Youtube, Vimeo etc.', 'astrid') );
-        parent::__construct(false, $name = __('Astrid: Video', 'astrid'), $widget_ops);
+		$widget_ops = array('classname' => 'atframework_video_widget', 'description' => __( 'Display a video from Youtube, Vimeo etc.', 'sinan') );
+        parent::__construct(false, $name = __('Sinan: Video', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_video_widget';	
     }
 	
@@ -14,11 +14,11 @@ class Atframework_Video extends WP_Widget {
 	?>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 	</p>
 
-	<p><label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Paste the URL of the video (only from a network that supports oEmbed, like Youtube, Vimeo etc.):', 'astrid' ); ?></label>
+	<p><label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Paste the URL of the video (only from a network that supports oEmbed, like Youtube, Vimeo etc.):', 'sinan' ); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo $url; ?>" size="3" /></p>
 	
 	<?php

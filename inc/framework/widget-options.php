@@ -2,7 +2,7 @@
 /**
  * Custom widget options
  *
- * @package Astrid
+ * @package Sinan
  */
 
 class Atframework_Widget_Options {
@@ -33,27 +33,27 @@ class Atframework_Widget_Options {
   ?>
 
     <div class="at-styling-options">
-      <h4><?php _e( 'Styling', 'astrid' ); ?><span><?php _e( 'Click to expand', 'astrid' ); ?></span></h4>
+      <h4><?php _e( 'Styling', 'sinan' ); ?><span><?php _e( 'Click to expand', 'sinan' ); ?></span></h4>
       <div class="at-styling-inner">
-        <em style="font-size:12px;"><?php _e( 'Options found in this panel apply only to this widget.', 'astrid' ); ?></em>
-        <p><label for="<?php echo $widget->get_field_id('sectionId'); ?>"><?php _e('Section ID', 'astrid'); ?><br></label>
+        <em style="font-size:12px;"><?php _e( 'Options found in this panel apply only to this widget.', 'sinan' ); ?></em>
+        <p><label for="<?php echo $widget->get_field_id('sectionId'); ?>"><?php _e('Section ID', 'sinan'); ?><br></label>
         <input class="widefat" id="<?php echo $widget->get_field_id( 'sectionId' ); ?>" name="<?php echo $widget->get_field_name( 'sectionId' ); ?>" type="text" value="<?php echo $sectionId; ?>" size="3" /></p>        
-        <p><label for="<?php echo $widget->get_field_id('background_color'); ?>"><?php _e('Background color', 'astrid'); ?><br></label>
+        <p><label for="<?php echo $widget->get_field_id('background_color'); ?>"><?php _e('Background color', 'sinan'); ?><br></label>
         <input type="text" name="<?php echo $widget->get_field_name('background_color'); ?>" id="<?php echo $widget->get_field_id('background_color'); ?>" class="color-field" value="<?php echo $background_color; ?>" /></p>
-        <p><label for="<?php echo $widget->get_field_id('text_color'); ?>"><?php _e('Text color', 'astrid'); ?><br></label>
+        <p><label for="<?php echo $widget->get_field_id('text_color'); ?>"><?php _e('Text color', 'sinan'); ?><br></label>
         <input type="text" name="<?php echo $widget->get_field_name('text_color'); ?>" id="<?php echo $widget->get_field_id('text_color'); ?>" class="color-field" value="<?php echo $text_color; ?>" /></p>  
-        <p><label for="<?php echo $widget->get_field_id('widget_title_color'); ?>"><?php _e('Widget title color', 'astrid'); ?><br></label>
+        <p><label for="<?php echo $widget->get_field_id('widget_title_color'); ?>"><?php _e('Widget title color', 'sinan'); ?><br></label>
         <input type="text" name="<?php echo $widget->get_field_name('widget_title_color'); ?>" id="<?php echo $widget->get_field_id('widget_title_color'); ?>" class="color-field" value="<?php echo $widget_title_color; ?>" /></p>       
-        <p><label for="<?php echo $widget->get_field_id('image_uri'); ?>"><?php _e('Background image URL', 'astrid'); ?><br></label>
+        <p><label for="<?php echo $widget->get_field_id('image_uri'); ?>"><?php _e('Background image URL', 'sinan'); ?><br></label>
         <input class="widefat" id="<?php echo $widget->get_field_id( 'image_uri' ); ?>" name="<?php echo $widget->get_field_name( 'image_uri' ); ?>" type="text" value="<?php echo $image_uri; ?>" size="3" /></p>
         <p>
-        <label for="<?php echo $widget->get_field_id('column_width'); ?>"><?php _e( 'Widget width:', 'astrid' ); ?></label>
+        <label for="<?php echo $widget->get_field_id('column_width'); ?>"><?php _e( 'Widget width:', 'sinan' ); ?></label>
     	  <select name="<?php echo $widget->get_field_name('column_width'); ?>" id="<?php echo $widget->get_field_id('column_width'); ?>" class="widefat">
       	<?php
       	$options = array(
-      		'full' 	=> __( 'Full Width', 'astrid' ), 
-      		'half' 	=> __( '1/2 Width', 'astrid' ), 
-      		'third' => __( '1/3 Width', 'astrid' ), 
+      		'full' 	=> __( 'Full Width', 'sinan' ), 
+      		'half' 	=> __( '1/2 Width', 'sinan' ), 
+      		'third' => __( '1/3 Width', 'sinan' ), 
       	); 
       	foreach ($options as $key => $option) {
           echo '<option value="' . $key . '" id="widget-selector-' . $key . '"', $column_width == $key ? ' selected="selected"' : '', '>', esc_attr($option), '</option>';
@@ -61,10 +61,10 @@ class Atframework_Widget_Options {
       	?>
     	  </select>
         </p>
-        <p><label for="<?php echo $widget->get_field_id('padding'); ?>"><?php _e('Top/bottom padding [px]', 'astrid'); ?><br></label>
+        <p><label for="<?php echo $widget->get_field_id('padding'); ?>"><?php _e('Top/bottom padding [px]', 'sinan'); ?><br></label>
         <input class="widefat custom_media_url" id="<?php echo $widget->get_field_id( 'padding' ); ?>" name="<?php echo $widget->get_field_name( 'padding' ); ?>" type="text" value="<?php echo $padding; ?>" size="3" /></p>        
         <p><input class="checkbox" type="checkbox" <?php checked( $no_container ); ?> id="<?php echo $widget->get_field_id( 'no_container' ); ?>" name="<?php echo $widget->get_field_name( 'no_container' ); ?>" />
-        <label for="<?php echo $widget->get_field_id( 'no_container' ); ?>"><?php _e( 'Remove container?', 'astrid' ); ?></label></p>        
+        <label for="<?php echo $widget->get_field_id( 'no_container' ); ?>"><?php _e( 'Remove container?', 'sinan' ); ?></label></p>        
       </div>   
     </div>
 
@@ -113,7 +113,7 @@ class Atframework_Widget_Options {
       $bg_color 		      = isset($instance['background_color']) ? $instance['background_color'] : null;
       $text_color 	      = isset($instance['text_color']) ? $instance['text_color'] : null;
       $widget_title_color = isset($instance['widget_title_color']) ? $instance['widget_title_color'] : null;      
-	    $column_width       = isset( $instance['column_width'] ) ? esc_attr($instance['column_width']) : __( 'Full Width', 'astrid' );
+	    $column_width       = isset( $instance['column_width'] ) ? esc_attr($instance['column_width']) : __( 'Full Width', 'sinan' );
       $image_uri          = isset( $instance['image_uri'] ) ? esc_url($instance['image_uri']) : '';
       $padding            = isset( $instance['padding'] ) ? intval($instance['padding']) : '100';
       $no_container       = isset( $instance['no_container'] ) ? $instance['no_container'] : false;
@@ -157,7 +157,7 @@ class Atframework_Widget_Options {
       return;
     }     
     wp_enqueue_style( 'wp-color-picker' );     
-    wp_enqueue_script( 'astrid-picker', get_template_directory_uri() . '/inc/framework/js/colorpicker.js', array( 'wp-color-picker' ), false, true );  
+    wp_enqueue_script( 'sinan-picker', get_template_directory_uri() . '/inc/framework/js/colorpicker.js', array( 'wp-color-picker' ), false, true );  
   }
 
 }

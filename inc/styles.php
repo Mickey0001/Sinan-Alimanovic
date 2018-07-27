@@ -1,10 +1,10 @@
 <?php
 /**
- * @package Astrid
+ * @package Sinan
  */
 
 //Converts hex colors to rgba for the menu background color
-function astrid_hex2rgba($color, $opacity = false) {
+function sinan_hex2rgba($color, $opacity = false) {
 
         if ($color[0] == '#' ) {
         	$color = substr( $color, 1 );
@@ -19,7 +19,7 @@ function astrid_hex2rgba($color, $opacity = false) {
 
 
 //Dynamic styles
-function astrid_custom_styles($custom) {
+function sinan_custom_styles($custom) {
 
 	$custom = '';
 
@@ -58,7 +58,7 @@ function astrid_custom_styles($custom) {
 	$custom .= ".site-description { color:" . esc_attr($site_desc) . "}"."\n";
 
 	$menu_bg    = get_theme_mod( 'menu_bg', '#202529' );
-	$menu_rgba 	= astrid_hex2rgba($menu_bg, 0.9);
+	$menu_rgba 	= sinan_hex2rgba($menu_bg, 0.9);
 	$custom .= ".site-header,.site-header.header-scrolled { background-color:" . esc_attr($menu_rgba) . "}"."\n";
 	$custom .= "@media only screen and (max-width: 1024px) { .site-header.has-header,.site-header.has-video,.site-header.has-single,.site-header.has-shortcode { background-color:" . esc_attr($menu_rgba) . "} }"."\n";
 
@@ -96,6 +96,6 @@ function astrid_custom_styles($custom) {
     $custom .= "body { font-size:" . intval($body_size) . "px; }"."\n";
 
 	//Output all the styles
-	wp_add_inline_style( 'astrid-style', $custom );	
+	wp_add_inline_style( 'sinan-style', $custom );	
 }
-add_action( 'wp_enqueue_scripts', 'astrid_custom_styles' );
+add_action( 'wp_enqueue_scripts', 'sinan_custom_styles' );

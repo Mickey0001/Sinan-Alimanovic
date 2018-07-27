@@ -2,8 +2,8 @@
  class Atframework_Social extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'atframework_social_widget', 'description' => __('Display your social profile', 'astrid') );
-		parent::__construct( 'atframework_social_widget', __('Astrid: Social Profile', 'astrid'), $widget_ops );
+		$widget_ops = array( 'classname' => 'atframework_social_widget', 'description' => __('Display your social profile', 'sinan') );
+		parent::__construct( 'atframework_social_widget', __('Sinan: Social Profile', 'sinan'), $widget_ops );
 	}
 
 	public function widget($args, $instance) {
@@ -49,19 +49,19 @@
 
 		// If no menus exists, direct the user to go and create some.
 		if ( !$menus ) {
-			echo '<p>'. sprintf( __('No menus have been created yet. <a href="%s">Create some</a>.', 'astrid'), admin_url('nav-menus.php') ) .'</p>';
+			echo '<p>'. sprintf( __('No menus have been created yet. <a href="%s">Create some</a>.', 'sinan'), admin_url('nav-menus.php') ) .'</p>';
 			return;
 		}
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'astrid') ?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'sinan') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
 		</p>
-		<p><em><?php _e('In order to display your social icons in a widget, all you need to do is go to <strong>Appearance > Menus</strong> and create a menu containing links to your social profiles, then assign that menu here. Supported networks: Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance etc.', 'astrid'); ?></em></p>
+		<p><em><?php _e('In order to display your social icons in a widget, all you need to do is go to <strong>Appearance > Menus</strong> and create a menu containing links to your social profiles, then assign that menu here. Supported networks: Facebook, Twitter, Google Plus, Instagram, Dribble, Vimeo, Linkedin, Youtube, Flickr, Pinterest, Tumblr, Foursquare, Behance etc.', 'sinan'); ?></em></p>
 		<p>
-			<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select your social menu:', 'astrid'); ?></label>
+			<label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select your social menu:', 'sinan'); ?></label>
 			<select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
-				<option value="0"><?php _e( '&mdash; Select &mdash;', 'astrid' ) ?></option>
+				<option value="0"><?php _e( '&mdash; Select &mdash;', 'sinan' ) ?></option>
 		<?php
 			foreach ( $menus as $menu ) {
 				echo '<option value="' . $menu->term_id . '"'

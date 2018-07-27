@@ -2,15 +2,15 @@
 /**
  * Astrid Theme Customizer.
  *
- * @package Astrid
+ * @package Sinan
  */
 
-function astrid_customize_register( $wp_customize ) {
+function sinan_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-    $wp_customize->get_section( 'header_image' )->panel         = 'astrid_header_panel';
+    $wp_customize->get_section( 'header_image' )->panel         = 'sinan_header_panel';
     $wp_customize->get_section( 'title_tagline' )->priority     = '9';
-    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'astrid');
+    $wp_customize->get_section( 'title_tagline' )->title        = __('Site branding', 'sinan');
     $wp_customize->remove_control( 'header_textcolor' );
 
 
@@ -25,20 +25,20 @@ function astrid_customize_register( $wp_customize ) {
         }
     }
     //___Header area___//
-    $wp_customize->add_panel( 'astrid_header_panel', array(
+    $wp_customize->add_panel( 'sinan_header_panel', array(
         'priority'       => 10,
         'capability'     => 'edit_theme_options',
         'theme_supports' => '',
-        'title'          => __('Header area', 'astrid'),
+        'title'          => __('Header area', 'sinan'),
     ) );
     //___Header type___//
     $wp_customize->add_section(
-        'astrid_header_type',
+        'sinan_header_type',
         array(
-            'title'         => __('Header type', 'astrid'),
+            'title'         => __('Header type', 'sinan'),
             'priority'      => 10,
-            'panel'         => 'astrid_header_panel', 
-            'description'   => __('Select your header type', 'astrid'),
+            'panel'         => 'sinan_header_panel', 
+            'description'   => __('Select your header type', 'sinan'),
         )
     );
     //Front page
@@ -46,20 +46,20 @@ function astrid_customize_register( $wp_customize ) {
         'front_header_type',
         array(
             'default'           => 'image',
-            'sanitize_callback' => 'astrid_sanitize_header',
+            'sanitize_callback' => 'sinan_sanitize_header',
         )
     );
     $wp_customize->add_control(
         'front_header_type',
         array(
             'type'        => 'radio',
-            'label'       => __('Front page header type', 'astrid'),
-            'section'     => 'astrid_header_type',
-            'description' => __('Select the header type for your front page', 'astrid'),
+            'label'       => __('Front page header type', 'sinan'),
+            'section'     => 'sinan_header_type',
+            'description' => __('Select the header type for your front page', 'sinan'),
             'choices' => array(
-                'image'     => __('Image', 'astrid'),
-                'video'     => __('Video', 'astrid'),
-                'nothing'   => __('Only menu', 'astrid')
+                'image'     => __('Image', 'sinan'),
+                'video'     => __('Video', 'sinan'),
+                'nothing'   => __('Only menu', 'sinan')
             ),
         )
     );
@@ -68,46 +68,46 @@ function astrid_customize_register( $wp_customize ) {
         'site_header_type',
         array(
             'default'           => 'nothing',
-            'sanitize_callback' => 'astrid_sanitize_header',
+            'sanitize_callback' => 'sinan_sanitize_header',
         )
     );
     $wp_customize->add_control(
         'site_header_type',
         array(
             'type'        => 'radio',
-            'label'       => __('Site header type', 'astrid'),
-            'section'     => 'astrid_header_type',
-            'description' => __('Select the header type for all pages except the front page', 'astrid'),
+            'label'       => __('Site header type', 'sinan'),
+            'section'     => 'sinan_header_type',
+            'description' => __('Select the header type for all pages except the front page', 'sinan'),
             'choices' => array(
-                'image'     => __('Image', 'astrid'),
-                'video'     => __('Video', 'astrid'),               
-                'nothing'   => __('Only menu', 'astrid')
+                'image'     => __('Image', 'sinan'),
+                'video'     => __('Video', 'sinan'),               
+                'nothing'   => __('Only menu', 'sinan')
             ),
         )
     );
 
     //___Header text___//
     $wp_customize->add_section(
-        'astrid_header_text',
+        'sinan_header_text',
         array(
-            'title'         => __('Header text', 'astrid'),
+            'title'         => __('Header text', 'sinan'),
             'priority'      => 14,
-            'panel'         => 'astrid_header_panel', 
+            'panel'         => 'sinan_header_panel', 
         )
     );    
     $wp_customize->add_setting(
         'header_text',
         array(
             'default' => '',
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
             'transport'     => 'postMessage'
         )
     );
     $wp_customize->add_control(
         'header_text',
         array(
-            'label' => __( 'Header text', 'astrid' ),
-            'section' => 'astrid_header_text',
+            'label' => __( 'Header text', 'sinan' ),
+            'section' => 'sinan_header_text',
             'type' => 'text',
             'priority' => 10
         )
@@ -116,15 +116,15 @@ function astrid_customize_register( $wp_customize ) {
         'header_subtext',
         array(
             'default' => '',
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
             'transport'     => 'postMessage'
         )
     );
     $wp_customize->add_control(
         'header_subtext',
         array(
-            'label' => __( 'Header small text', 'astrid' ),
-            'section' => 'astrid_header_text',
+            'label' => __( 'Header small text', 'sinan' ),
+            'section' => 'sinan_header_text',
             'type' => 'text',
             'priority' => 10
         )
@@ -133,14 +133,14 @@ function astrid_customize_register( $wp_customize ) {
         'header_button',
         array(
             'default' => '',
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'header_button',
         array(
-            'label' => __( 'Button text', 'astrid' ),
-            'section' => 'astrid_header_text',
+            'label' => __( 'Button text', 'sinan' ),
+            'section' => 'sinan_header_text',
             'type' => 'text',
             'priority' => 10
         )
@@ -155,8 +155,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_button_url',
         array(
-            'label' => __( 'Button URL', 'astrid' ),
-            'section' => 'astrid_header_text',
+            'label' => __( 'Button URL', 'sinan' ),
+            'section' => 'sinan_header_text',
             'type' => 'text',
             'priority' => 11
         )
@@ -175,11 +175,11 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'mobile_header',
             array(
-               'label'          => __( 'Small screens header image', 'astrid' ),
+               'label'          => __( 'Small screens header image', 'sinan' ),
                'type'           => 'image',
                'section'        => 'header_image',
                'settings'       => 'mobile_header',
-               'description'    => __( 'Add a header image for screen widths smaller than 1024px', 'astrid' ),
+               'description'    => __( 'Add a header image for screen widths smaller than 1024px', 'sinan' ),
                'priority'       => 10,
             )
         )
@@ -187,11 +187,11 @@ function astrid_customize_register( $wp_customize ) {
 
     //___Menu style___//
     $wp_customize->add_section(
-        'astrid_menu_style',
+        'sinan_menu_style',
         array(
-            'title'         => __('Menu style', 'astrid'),
+            'title'         => __('Menu style', 'sinan'),
             'priority'      => 15,
-            'panel'         => 'astrid_header_panel', 
+            'panel'         => 'sinan_header_panel', 
         )
     );
     //Sticky menu
@@ -199,7 +199,7 @@ function astrid_customize_register( $wp_customize ) {
         'sticky_menu',
         array(
             'default'           => 'sticky',
-            'sanitize_callback' => 'astrid_sanitize_sticky',
+            'sanitize_callback' => 'sinan_sanitize_sticky',
         )
     );
     $wp_customize->add_control(
@@ -207,11 +207,11 @@ function astrid_customize_register( $wp_customize ) {
         array(
             'type' => 'radio',
             'priority'    => 10,
-            'label' => __('Sticky menu', 'astrid'),
-            'section' => 'astrid_menu_style',
+            'label' => __('Sticky menu', 'sinan'),
+            'section' => 'sinan_menu_style',
             'choices' => array(
-                'sticky'   => __('Sticky', 'astrid'),
-                'static'   => __('Static', 'astrid'),
+                'sticky'   => __('Sticky', 'sinan'),
+                'static'   => __('Static', 'sinan'),
             ),
         )
     );
@@ -220,7 +220,7 @@ function astrid_customize_register( $wp_customize ) {
         'menu_style',
         array(
             'default'           => 'inline',
-            'sanitize_callback' => 'astrid_sanitize_menu_style',
+            'sanitize_callback' => 'sinan_sanitize_menu_style',
             'transport'         => 'postMessage'
         )
     );
@@ -229,22 +229,22 @@ function astrid_customize_register( $wp_customize ) {
         array(
             'type'      => 'radio',
             'priority'  => 11,
-            'label'     => __('Menu style', 'astrid'),
-            'section'   => 'astrid_menu_style',
+            'label'     => __('Menu style', 'sinan'),
+            'section'   => 'sinan_menu_style',
             'choices'   => array(
-                'inline'     => __('Inline', 'astrid'),
-                'centered'   => __('Centered', 'astrid'),
+                'inline'     => __('Inline', 'sinan'),
+                'centered'   => __('Centered', 'sinan'),
             ),
         )
     );
 
     //___Fonts___//
     $wp_customize->add_section(
-        'astrid_fonts',
+        'sinan_fonts',
         array(
-            'title' => __('Fonts', 'astrid'),
+            'title' => __('Fonts', 'sinan'),
             'priority' => 15,
-            'description' => __('You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: athemes.com/documentation/astrid', 'astrid'),
+            'description' => __('You can use any Google Fonts you want for the heading and/or body. See the fonts here: google.com/fonts. See the documentation if you need help with this: athemes.com/documentation/sinan', 'sinan'),
         )
     );
 
@@ -259,8 +259,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'body_font_name',
         array(
-            'label' => __( 'Body font name/style/sets', 'astrid' ),
-            'section' => 'astrid_fonts',
+            'label' => __( 'Body font name/style/sets', 'sinan' ),
+            'section' => 'sinan_fonts',
             'type' => 'text',
             'priority' => 11
         )
@@ -270,15 +270,15 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'body_font_family',
         array(
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
             'default' => 'font-family: \'Open Sans\', sans-serif;',
         )
     );
     $wp_customize->add_control(
         'body_font_family',
         array(
-            'label' => __( 'Body font family', 'astrid' ),
-            'section' => 'astrid_fonts',
+            'label' => __( 'Body font family', 'sinan' ),
+            'section' => 'sinan_fonts',
             'type' => 'text',
             'priority' => 12
         )
@@ -294,8 +294,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'headings_font_name',
         array(
-            'label' => __( 'Headings font name/style/sets', 'astrid' ),
-            'section' => 'astrid_fonts',
+            'label' => __( 'Headings font name/style/sets', 'sinan' ),
+            'section' => 'sinan_fonts',
             'type' => 'text',
             'priority' => 14
         )
@@ -304,15 +304,15 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'headings_font_family',
         array(
-            'sanitize_callback' => 'astrid_sanitize_text',            
+            'sanitize_callback' => 'sinan_sanitize_text',            
             'default' => 'font-family: \'Josefin Sans\', sans-serif;',
         )
     );
     $wp_customize->add_control(
         'headings_font_family',
         array(
-            'label' => __( 'Headings font family', 'astrid' ),
-            'section' => 'astrid_fonts',
+            'label' => __( 'Headings font family', 'sinan' ),
+            'section' => 'sinan_fonts',
             'type' => 'text',
             'priority' => 15
         )
@@ -330,8 +330,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'site_title_size', array(
         'type'        => 'number',
         'priority'    => 17,
-        'section'     => 'astrid_fonts',
-        'label'       => __('Site title', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('Site title', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 80,
@@ -350,8 +350,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'site_desc_size', array(
         'type'        => 'number',
         'priority'    => 17,
-        'section'     => 'astrid_fonts',
-        'label'       => __('Site description', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('Site description', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 50,
@@ -370,8 +370,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'h1_size', array(
         'type'        => 'number',
         'priority'    => 17,
-        'section'     => 'astrid_fonts',
-        'label'       => __('H1 font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('H1 font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
@@ -390,8 +390,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'h2_size', array(
         'type'        => 'number',
         'priority'    => 18,
-        'section'     => 'astrid_fonts',
-        'label'       => __('H2 font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('H2 font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
@@ -411,8 +411,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'h3_size', array(
         'type'        => 'number',
         'priority'    => 19,
-        'section'     => 'astrid_fonts',
-        'label'       => __('H3 font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('H3 font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
@@ -431,8 +431,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'h4_size', array(
         'type'        => 'number',
         'priority'    => 20,
-        'section'     => 'astrid_fonts',
-        'label'       => __('H4 font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('H4 font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
@@ -451,8 +451,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'h5_size', array(
         'type'        => 'number',
         'priority'    => 21,
-        'section'     => 'astrid_fonts',
-        'label'       => __('H5 font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('H5 font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
@@ -471,8 +471,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'h6_size', array(
         'type'        => 'number',
         'priority'    => 22,
-        'section'     => 'astrid_fonts',
-        'label'       => __('H6 font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('H6 font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 60,
@@ -491,8 +491,8 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
         'priority'    => 23,
-        'section'     => 'astrid_fonts',
-        'label'       => __('Body font size', 'astrid'),
+        'section'     => 'sinan_fonts',
+        'label'       => __('Body font size', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 24,
@@ -505,7 +505,7 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'blog_options',
         array(
-            'title' => __('Blog options', 'astrid'),
+            'title' => __('Blog options', 'sinan'),
             'priority' => 13,
         )
     );  
@@ -514,20 +514,20 @@ function astrid_customize_register( $wp_customize ) {
         'blog_layout',
         array(
             'default'           => 'list',
-            'sanitize_callback' => 'astrid_sanitize_blog',
+            'sanitize_callback' => 'sinan_sanitize_blog',
         )
     );
     $wp_customize->add_control(
         'blog_layout',
         array(
             'type'      => 'radio',
-            'label'     => __('Blog layout', 'astrid'),
+            'label'     => __('Blog layout', 'sinan'),
             'section'   => 'blog_options',
             'priority'  => 11,
             'choices'   => array(
-                'list'           	=> __( 'List', 'astrid' ),
-                'fullwidth'         => __( 'Full width (no sidebar)', 'astrid' ),
-                'masonry-layout'    => __( 'Masonry (grid style)', 'astrid' )
+                'list'           	=> __( 'List', 'sinan' ),
+                'fullwidth'         => __( 'Full width (no sidebar)', 'sinan' ),
+                'masonry-layout'    => __( 'Masonry (grid style)', 'sinan' )
             ),
         )
     ); 
@@ -535,14 +535,14 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'fullwidth_single',
         array(
-            'sanitize_callback' => 'astrid_sanitize_checkbox',
+            'sanitize_callback' => 'sinan_sanitize_checkbox',
         )       
     );
     $wp_customize->add_control(
         'fullwidth_single',
         array(
             'type'      => 'checkbox',
-            'label'     => __('Full width single posts?', 'astrid'),
+            'label'     => __('Full width single posts?', 'sinan'),
             'section'   => 'blog_options',
             'priority'  => 12,
         )
@@ -559,7 +559,7 @@ function astrid_customize_register( $wp_customize ) {
         'type'        => 'number',
         'priority'    => 13,
         'section'     => 'blog_options',
-        'label'       => __('Excerpt length', 'astrid'),
+        'label'       => __('Excerpt length', 'sinan'),
         'input_attrs' => array(
             'min'   => 10,
             'max'   => 200,
@@ -570,7 +570,7 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
       'hide_meta',
       array(
-        'sanitize_callback' => 'astrid_sanitize_checkbox',
+        'sanitize_callback' => 'sinan_sanitize_checkbox',
         'default' => 0,     
       )   
     );
@@ -578,7 +578,7 @@ function astrid_customize_register( $wp_customize ) {
       'hide_meta',
       array(
         'type' => 'checkbox',
-        'label' => __('Hide post meta?', 'astrid'),
+        'label' => __('Hide post meta?', 'sinan'),
         'section' => 'blog_options',
         'priority' => 14,
       )
@@ -587,14 +587,14 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'featured_image',
         array(
-            'sanitize_callback' => 'astrid_sanitize_checkbox',
+            'sanitize_callback' => 'sinan_sanitize_checkbox',
         )       
     );
     $wp_customize->add_control(
         'featured_image',
         array(
             'type' => 'checkbox',
-            'label' => __('Hide featured images?', 'astrid'),
+            'label' => __('Hide featured images?', 'sinan'),
             'section' => 'blog_options',
             'priority' => 22,
         )
@@ -602,9 +602,9 @@ function astrid_customize_register( $wp_customize ) {
 
     //___Footer___//
     $wp_customize->add_section(
-        'astrid_footer',
+        'sinan_footer',
         array(
-            'title'         => __('Footer', 'astrid'),
+            'title'         => __('Footer', 'sinan'),
             'priority'      => 18,
         )
     );
@@ -612,20 +612,20 @@ function astrid_customize_register( $wp_customize ) {
         'footer_widget_areas',
         array(
             'default'           => '3',
-            'sanitize_callback' => 'astrid_sanitize_fwidgets',
+            'sanitize_callback' => 'sinan_sanitize_fwidgets',
         )
     );
     $wp_customize->add_control(
         'footer_widget_areas',
         array(
             'type'        => 'radio',
-            'label'       => __('Footer widget area', 'astrid'),
-            'section'     => 'astrid_footer',
-            'description' => __('Choose the number of widget areas in the footer, then go to Appearance > Widgets and add your widgets.', 'astrid'),
+            'label'       => __('Footer widget area', 'sinan'),
+            'section'     => 'sinan_footer',
+            'description' => __('Choose the number of widget areas in the footer, then go to Appearance > Widgets and add your widgets.', 'sinan'),
             'choices' => array(
-                '1'     => __('One', 'astrid'),
-                '2'     => __('Two', 'astrid'),
-                '3'     => __('Three', 'astrid'),
+                '1'     => __('One', 'sinan'),
+                '2'     => __('Two', 'sinan'),
+                '3'     => __('Three', 'sinan'),
             ),
         )
     );
@@ -642,23 +642,23 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'footer_logo',
             array(
-               'label'          => __( 'Upload your footer logo', 'astrid' ),
+               'label'          => __( 'Upload your footer logo', 'sinan' ),
                'type'           => 'image',
-               'section'        => 'astrid_footer',
+               'section'        => 'sinan_footer',
                'priority'       => 11,
             )
         )
     );
     // Footer contact
-    $wp_customize->add_setting('astrid_options[info]', array(
+    $wp_customize->add_setting('sinan_options[info]', array(
             'type'              => 'info_control',
             'sanitize_callback' => 'esc_attr',            
         )
     );
     $wp_customize->add_control( new Astrid_Info( $wp_customize, 'footer_contact', array(
-        'label' => __('Contact', 'astrid'),
-        'section' => 'astrid_footer',
-        'settings' => 'astrid_options[info]',
+        'label' => __('Contact', 'sinan'),
+        'section' => 'sinan_footer',
+        'settings' => 'sinan_options[info]',
         'priority' => 12
         ) )
     );    
@@ -666,7 +666,7 @@ function astrid_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'toggle_contact_footer',
         array(
-            'sanitize_callback' => 'astrid_sanitize_checkbox',
+            'sanitize_callback' => 'sinan_sanitize_checkbox',
             'default'           => 1
         )       
     );
@@ -674,8 +674,8 @@ function astrid_customize_register( $wp_customize ) {
         'toggle_contact_footer',
         array(
             'type' => 'checkbox',
-            'label' => __('Activate the footer contact and logo area?', 'astrid'),
-            'section' => 'astrid_footer',
+            'label' => __('Activate the footer contact and logo area?', 'sinan'),
+            'section' => 'sinan_footer',
             'priority' => 13,
         )
     );
@@ -684,14 +684,14 @@ function astrid_customize_register( $wp_customize ) {
         'footer_contact_address',
         array(
             'default' => '',
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'footer_contact_address',
         array(
-            'label' => __( 'Address', 'astrid' ),
-            'section' => 'astrid_footer',
+            'label' => __( 'Address', 'sinan' ),
+            'section' => 'sinan_footer',
             'type' => 'text',
             'priority' => 14
         )
@@ -701,14 +701,14 @@ function astrid_customize_register( $wp_customize ) {
         'footer_contact_email',
         array(
             'default' => '',
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'footer_contact_email',
         array(
-            'label' => __( 'Email address', 'astrid' ),
-            'section' => 'astrid_footer',
+            'label' => __( 'Email address', 'sinan' ),
+            'section' => 'sinan_footer',
             'type' => 'text',
             'priority' => 15
         )
@@ -718,14 +718,14 @@ function astrid_customize_register( $wp_customize ) {
         'footer_contact_phone',
         array(
             'default' => '',
-            'sanitize_callback' => 'astrid_sanitize_text',
+            'sanitize_callback' => 'sinan_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'footer_contact_phone',
         array(
-            'label' => __( 'Phone number', 'astrid' ),
-            'section' => 'astrid_footer',
+            'label' => __( 'Phone number', 'sinan' ),
+            'section' => 'sinan_footer',
             'type' => 'text',
             'priority' => 16
         )
@@ -745,7 +745,7 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'primary_color',
             array(
-                'label'         => __('Primary color', 'astrid'),
+                'label'         => __('Primary color', 'sinan'),
                 'section'       => 'colors',
                 'priority'      => 12
             )
@@ -765,7 +765,7 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'site_title',
             array(
-                'label'         => __('Site title', 'astrid'),
+                'label'         => __('Site title', 'sinan'),
                 'section'       => 'colors',
                 'priority'      => 13
             )
@@ -785,7 +785,7 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'site_description',
             array(
-                'label'         => __('Site description', 'astrid'),
+                'label'         => __('Site description', 'sinan'),
                 'section'       => 'colors',
                 'priority'      => 13
             )
@@ -804,7 +804,7 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'menu_bg',
             array(
-                'label'         => __('Menu background', 'astrid'),
+                'label'         => __('Menu background', 'sinan'),
                 'section'       => 'colors',
                 'priority'      => 13
             )
@@ -824,7 +824,7 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'body_text_color',
             array(
-                'label' => __('Body text', 'astrid'),
+                'label' => __('Body text', 'sinan'),
                 'section' => 'colors',
                 'settings' => 'body_text_color',
                 'priority' => 14
@@ -845,7 +845,7 @@ function astrid_customize_register( $wp_customize ) {
             $wp_customize,
             'footer_bg',
             array(
-                'label' => __('Footer background', 'astrid'),
+                'label' => __('Footer background', 'sinan'),
                 'section' => 'colors',
                 'priority' => 15
             )
@@ -853,24 +853,24 @@ function astrid_customize_register( $wp_customize ) {
     );
 
 }
-add_action( 'customize_register', 'astrid_customize_register' );
+add_action( 'customize_register', 'sinan_customize_register' );
 
 
 /**
  * Sanitize
  */
 //Header type
-function astrid_sanitize_header( $input ) {
+function sinan_sanitize_header( $input ) {
     if ( in_array( $input, array( 'image', 'shortcode', 'video', 'nothing' ), true ) ) {
         return $input;
     }
 }
 //Text
-function astrid_sanitize_text( $input ) {
+function sinan_sanitize_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 //Checkboxes
-function astrid_sanitize_checkbox( $input ) {
+function sinan_sanitize_checkbox( $input ) {
     if ( $input == 1 ) {
         return 1;
     } else {
@@ -878,25 +878,25 @@ function astrid_sanitize_checkbox( $input ) {
     }
 }
 //Menu style
-function astrid_sanitize_menu_style( $input ) {
+function sinan_sanitize_menu_style( $input ) {
     if ( in_array( $input, array( 'inline', 'centered' ), true ) ) {
         return $input;
     }
 }
 //Menu style
-function astrid_sanitize_sticky( $input ) {
+function sinan_sanitize_sticky( $input ) {
     if ( in_array( $input, array( 'sticky', 'static' ), true ) ) {
         return $input;
     }
 }
 //Footer widget areas
-function astrid_sanitize_fwidgets( $input ) {
+function sinan_sanitize_fwidgets( $input ) {
     if ( in_array( $input, array( '1', '2', '3' ), true ) ) {
         return $input;
     }
 }
 //Blog layout
-function astrid_sanitize_blog( $input ) {
+function sinan_sanitize_blog( $input ) {
     if ( in_array( $input, array( 'list', 'fullwidth', 'masonry-layout' ), true ) ) {
         return $input;
     }
@@ -905,7 +905,7 @@ function astrid_sanitize_blog( $input ) {
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function astrid_customize_preview_js() {
-	wp_enqueue_script( 'astrid_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function sinan_customize_preview_js() {
+	wp_enqueue_script( 'sinan_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
-add_action( 'customize_preview_init', 'astrid_customize_preview_js' );
+add_action( 'customize_preview_init', 'sinan_customize_preview_js' );
