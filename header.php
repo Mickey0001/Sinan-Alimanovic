@@ -1,45 +1,83 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-  <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="<?php bloginfo('description'); ?>">
-    <title>
-      <?php bloginfo('name'); ?> |
-      <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
-    </title>
-    <!-- Bootstrap core CSS -->
-    <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <?php wp_head(); ?>
-  </head>
-  <body>
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <?php
-           wp_nav_menu( array(
-               'menu'              => 'primary',
-               'theme_location'    => 'primary',
-               'depth'             => 2,
-               'container'         => 'div',
-               'container_class'   => 'collapse navbar-collapse',
-       'container_id'      => 'bs-example-navbar-collapse-1',
-               'menu_class'        => 'nav navbar-nav',
-               'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-               'walker'            => new wp_bootstrap_navwalker())
-           );
-       ?>
-        </nav>
-      </div>
-    </div>
+<?php
+/**
+ * The header for our theme.
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Astrid
+ */
 
-    <div class="container">
-      <div class="blog-header">
-        <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-        <p class="lead blog-description"><?php bloginfo('description'); ?></p>
-      </div>
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<div class="preloader">
+<div class="preloader-inner">
+	<ul><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+</div>
+</div>
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'astrid' ); ?></a>
+
+	<header id="masthead" class="site-header <?php echo astrid_has_header(); ?>" role="banner">
+		<div class="container">
+			<div class="site-branding col-md-4 col-sm-6 col-xs-12">
+				<?php astrid_branding(); ?>
+			</div>
+			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa fa-navicon"></i></div>
+			<nav id="mainnav" class="main-navigation col-md-8 col-sm-6 col-xs-12" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+		</div>
+	</header><!-- #masthead -->
+
+	<?php $astrid_has_header = astrid_has_header(); ?>
+	<?php if ( $astrid_has_header == 'has-header' ) : ?>
+	<div class="header-image">
+		<?php astrid_header_text(); ?>
+		<img class="large-header" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+		
+		<?php $mobile_default = get_template_directory_uri() . '/images/header-mobile.jpg'; ?>
+		<?php $mobile = get_theme_mod('mobile_header', $mobile_default); ?>
+		<?php if ( $mobile ) : ?>
+		<img class="small-header" src="<?php echo esc_url($mobile); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo('name'); ?>">
+		<?php else : ?>
+		<img class="small-header" src="<?php header_image(); ?>" width="1024" alt="<?php bloginfo('name'); ?>">
+		<?php endif; ?>
+	</div>
+	<?php elseif ( $astrid_has_header == 'has-shortcode' ) : ?>
+	<div class="shortcode-area">
+		<?php $shortcode = get_theme_mod('astrid_shortcode'); ?>
+		<?php echo do_shortcode(wp_kses_post($shortcode)); ?>
+	</div>
+	<?php elseif ( $astrid_has_header == 'has-video' ) : ?>
+		<?php the_custom_header_markup(); ?>
+	<?php elseif ( $astrid_has_header == 'has-single' ) : ?>
+		<?php $single_toggle = get_post_meta( $post->ID, '_astrid_single_header_shortcode', true ); ?>
+		<?php echo do_shortcode(wp_kses_post($single_toggle)); ?>
+	<?php else : ?>
+	<div class="header-clone"></div>
+	<?php endif; ?>	
+
+	<?php if ( !is_page_template('page-templates/page_widgetized.php') ) : ?>
+		<?php $container = 'container'; ?>
+	<?php else : ?>
+		<?php $container = 'home-wrapper'; ?>
+	<?php endif; ?>
+
+	<?php do_action('astrid_before_content'); ?>
+
+	<div id="content" class="site-content">
+		<div class="<?php echo $container; ?>">

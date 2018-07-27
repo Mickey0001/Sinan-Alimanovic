@@ -1,14 +1,38 @@
-<?php get_header(); ?>
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-          <?php if(have_posts()) : ?>
-            <?php while(have_posts()) : the_post(); ?>
-            <?php get_template_part('content', get_post_format()); ?>
-          <?php endwhile; ?>
-        <?php else : ?>
-          <p><?php __('No Posts Found'); ?></p>
-        <?php endif; ?>
+<?php
+/**
+ * The template for displaying all single posts.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package Astrid
+ */
 
-        </div><!-- /.blog-main -->
+get_header(); ?>
 
-    <?php get_footer(); ?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<?php
+		while ( have_posts() ) : the_post();
+
+			get_template_part( 'template-parts/content', get_post_format() );
+
+			the_post_navigation();
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+if ( get_theme_mod('fullwidth_single', 0) != 1 ) :
+	get_sidebar();
+endif;
+get_footer();
+?>
