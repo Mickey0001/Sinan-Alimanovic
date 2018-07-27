@@ -231,7 +231,7 @@ select {
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
-	color: #fff;
+	color: #F5F5DC;
 	position: relative;
 	padding: 3px 0;
 	z-index: 11;	
@@ -1455,7 +1455,7 @@ section.at-3-col {
 }
 .site-title a,
 .site-title a:hover {
-	color: #fff;
+	color: #F5F5DC;
 	text-decoration: none;
 }
 .site-description {
@@ -1627,7 +1627,7 @@ body.page-template-page_widgetized {
 .footer-widgets a,
 .footer-info a,
 .site-footer a {
-	color: #a3aaaa;
+	color: #F5F5DC;
 }
 .site-footer a:hover,
 .footer-info a:hover,
