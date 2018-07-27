@@ -8,8 +8,8 @@
 class Atframework_Posts extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'atframework_posts_widget', 'description' => __( 'Show the latest news from your blog.', 'astrid') );
-        parent::__construct(false, $name = __('Astrid FP: Latest News', 'astrid'), $widget_ops);
+		$widget_ops = array('classname' => 'atframework_posts_widget', 'description' => __( 'Show the latest news from your blog.', 'sinan') );
+        parent::__construct(false, $name = __('Sinan FP: Latest News', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_posts_widget';
 		
     }
@@ -21,14 +21,14 @@ class Atframework_Posts extends WP_Widget {
 	?>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 	</p>
 
-	<p><label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show posts from all categories.', 'astrid' ); ?></label>
+	<p><label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Enter the slug for your category or leave empty to show posts from all categories.', 'sinan' ); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'category' ); ?>" name="<?php echo $this->get_field_name( 'category' ); ?>" type="text" value="<?php echo $category; ?>" size="3" /></p>	
 
-    <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('Add the text for the button here if you want to change the default <em>See all our news</em>', 'astrid'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('Add the text for the button here if you want to change the default <em>See all our news</em>', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'see_all_text' ); ?>" name="<?php echo $this->get_field_name( 'see_all_text' ); ?>" type="text" value="<?php echo $see_all_text; ?>" size="3" /></p>		
 
 	<?php
@@ -72,9 +72,9 @@ class Atframework_Posts extends WP_Widget {
 		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : '';
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 		$category = isset( $instance['category'] ) ? esc_attr($instance['category']) : '';
-		$see_all_text = isset( $instance['see_all_text'] ) ? esc_html($instance['see_all_text']) : __( 'See all our news', 'astrid' );
+		$see_all_text = isset( $instance['see_all_text'] ) ? esc_html($instance['see_all_text']) : __( 'See all our news', 'sinan' );
 		if ($see_all_text == '') {
-			$see_all_text = __( 'See all our news', 'astrid' );
+			$see_all_text = __( 'See all our news', 'sinan' );
 		}
 
 		$r = new WP_Query( array(
@@ -92,17 +92,17 @@ class Atframework_Posts extends WP_Widget {
 		<?php if ( $title ) echo $before_title . $title . $after_title; ?>
 
 		<?php while ( $r->have_posts() ) : $r->the_post(); ?>
-			<div class="blog-post astrid-3col">
+			<div class="blog-post sinan-3col">
 				<?php if ( has_post_thumbnail() ) : ?>
 				<div class="post-thumb">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail('astrid-small-thumb'); ?>
+						<?php the_post_thumbnail('sinan-small-thumb'); ?>
 					</a>			
 				</div>	
 				<?php endif; ?>							
 				<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 				<div class="entry-meta">
-					<?php astrid_posted_on(); ?>
+					<?php sinan_posted_on(); ?>
 				</div>	
 				<div class="entry-summary"><?php the_excerpt(); ?></div>
 			</div>

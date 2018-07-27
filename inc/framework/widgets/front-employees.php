@@ -2,14 +2,14 @@
 /**
  * Employees widget
  *
- * @package Astrid
+ * @package Sinan
  */
 
 class Atframework_Employees extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'atframework_employees_widget', 'description' => __( 'Show your employees', 'astrid') );
-        parent::__construct(false, $name = __('Astrid FP: Employees', 'astrid'), $widget_ops);
+		$widget_ops = array('classname' => 'atframework_employees_widget', 'description' => __( 'Show your employees', 'sinan') );
+        parent::__construct(false, $name = __('Astrid FP: Employees', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_employees_widget';
 			
     }
@@ -23,21 +23,21 @@ class Atframework_Employees extends WP_Widget {
 		$pageids  		= isset( $instance['pageids'] ) ? esc_html( $instance['pageids'] ) : '';		
 	?>
 
-	<p><?php _e('This widget displays all pages that have the Single Employee page template assigned to them.', 'astrid'); ?></p>
-	<p><em><?php _e('Tip: to rearrange the employees order, edit each employee page and add a value in Page Attributes > Order', 'astrid'); ?></em></p>
+	<p><?php _e('This widget displays all pages that have the Single Employee page template assigned to them.', 'sinan'); ?></p>
+	<p><em><?php _e('Tip: to rearrange the employees order, edit each employee page and add a value in Page Attributes > Order', 'sinan'); ?></em></p>
 	<p>
-	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 	</p>
-	<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of employees to show (-1 shows all of them):', 'astrid' ); ?></label>
+	<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of employees to show (-1 shows all of them):', 'sinan' ); ?></label>
 	<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
-	<p><label for="<?php echo $this->get_field_id( 'offset' ); ?>"><?php _e( 'Offset (number of employees needs to be different than -1 for this option to work):', 'astrid' ); ?></label>
+	<p><label for="<?php echo $this->get_field_id( 'offset' ); ?>"><?php _e( 'Offset (number of employees needs to be different than -1 for this option to work):', 'sinan' ); ?></label>
 	<input id="<?php echo $this->get_field_id( 'offset' ); ?>" name="<?php echo $this->get_field_name( 'offset' ); ?>" type="text" value="<?php echo $offset; ?>" size="3" /></p>
-	<p><label for="<?php echo $this->get_field_id( 'pageids' ); ?>"><?php _e( 'Page IDs to display in this widget (separated by commas, example: 14,810,220). Note: you can find the page ID in the URL bar while editing your page.', 'astrid' ); ?></label>
+	<p><label for="<?php echo $this->get_field_id( 'pageids' ); ?>"><?php _e( 'Page IDs to display in this widget (separated by commas, example: 14,810,220). Note: you can find the page ID in the URL bar while editing your page.', 'sinan' ); ?></label>
 	<input id="<?php echo $this->get_field_id( 'pageids' ); ?>" name="<?php echo $this->get_field_name( 'pageids' ); ?>" type="text" value="<?php echo $pageids; ?>" size="3" /></p>	
-    <p><label for="<?php echo $this->get_field_id('see_all'); ?>"><?php _e('The URL for your button [In case you want a button below your employees block]', 'astrid'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('see_all'); ?>"><?php _e('The URL for your button [In case you want a button below your employees block]', 'sinan'); ?></label>
 	<input class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'see_all' ); ?>" name="<?php echo $this->get_field_name( 'see_all' ); ?>" type="text" value="<?php echo $see_all; ?>" size="3" /></p>	
-    <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('The text for the button [Defaults to <em>See all our employees</em> if left empty]', 'astrid'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('The text for the button [Defaults to <em>See all our employees</em> if left empty]', 'sinan'); ?></label>
 	<input class="widefat custom_media_url" id="<?php echo $this->get_field_id( 'see_all_text' ); ?>" name="<?php echo $this->get_field_name( 'see_all_text' ); ?>" type="text" value="<?php echo $see_all_text; ?>" size="3" /></p>	
 	<?php
 	}
@@ -120,10 +120,10 @@ class Atframework_Employees extends WP_Widget {
 
 				<div class="employees-area clearfix">
 					<?php while ( $employees->have_posts() ) : $employees->the_post(); ?>
-						<div class="employee astrid-3col">
+						<div class="employee sinan-3col">
 							<?php if ( has_post_thumbnail() ) : ?>
 							<div class="employee-thumb">
-								<?php the_post_thumbnail('astrid-small-thumb'); ?>
+								<?php the_post_thumbnail('sinan-small-thumb'); ?>
 							</div>
 							<?php endif; ?>
 							<div class="employee-content">
@@ -139,7 +139,7 @@ class Atframework_Employees extends WP_Widget {
 						<?php if ($see_all_text) : ?>
 							<?php echo $see_all_text; ?>
 						<?php else : ?>
-							<?php echo __('See all our employees', 'astrid'); ?>
+							<?php echo __('See all our employees', 'sinan'); ?>
 						<?php endif; ?>
 					</a>
 				<?php endif; ?>				

@@ -4,8 +4,8 @@ if ( !class_exists('Atframework_Facts') ) {
 class Atframework_Facts extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'atframework_facts_widget', 'description' => __( 'Show your visitors some facts about your company.', 'astrid') );
-        parent::__construct(false, $name = __('Astrid FP: Facts', 'astrid'), $widget_ops);
+		$widget_ops = array('classname' => 'atframework_facts_widget', 'description' => __( 'Show your visitors some facts about your company.', 'sinan') );
+        parent::__construct(false, $name = __('Sinan FP: Facts', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_facts_widget';
     }
 	
@@ -25,73 +25,73 @@ class Atframework_Facts extends WP_Widget {
 		$fact_four_max  	= isset( $instance['fact_four_max'] ) ? esc_html( $instance['fact_four_max'] ) : '';
 		$fact_four_icon  	= isset( $instance['fact_four_icon'] ) ? esc_html( $instance['fact_four_icon'] ) : '';	
 	?>
-	<p><?php _e('You can find a list of the available icons ', 'astrid'); ?><a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank"><?php _e('here.', 'astrid'); ?></a>&nbsp;<?php _e('Usage example: <strong>fa-android</strong>', 'astrid'); ?></p>
+	<p><?php _e('You can find a list of the available icons ', 'sinan'); ?><a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/" target="_blank"><?php _e('here.', 'sinan'); ?></a>&nbsp;<?php _e('Usage example: <strong>fa-android</strong>', 'sinan'); ?></p>
 	<p>
-	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 	</p>
 
 	<!-- fact one -->
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_one'); ?>"><?php _e('First fact name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_one'); ?>"><?php _e('First fact name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_one'); ?>" name="<?php echo $this->get_field_name('fact_one'); ?>" type="text" value="<?php echo $fact_one; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_one_max'); ?>"><?php _e('First fact value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_one_max'); ?>"><?php _e('First fact value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_one_max'); ?>" name="<?php echo $this->get_field_name('fact_one_max'); ?>" type="text" value="<?php echo $fact_one_max; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_one_icon'); ?>"><?php _e('First fact icon', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_one_icon'); ?>"><?php _e('First fact icon', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_one_icon'); ?>" name="<?php echo $this->get_field_name('fact_one_icon'); ?>" type="text" value="<?php echo $fact_one_icon; ?>" />
 	</p>
 
 	<!-- fact two -->
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_two'); ?>"><?php _e('Second fact name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_two'); ?>"><?php _e('Second fact name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_two'); ?>" name="<?php echo $this->get_field_name('fact_two'); ?>" type="text" value="<?php echo $fact_two; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_two_max'); ?>"><?php _e('Second fact value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_two_max'); ?>"><?php _e('Second fact value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_two_max'); ?>" name="<?php echo $this->get_field_name('fact_two_max'); ?>" type="text" value="<?php echo $fact_two_max; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_two_icon'); ?>"><?php _e('Second fact icon', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_two_icon'); ?>"><?php _e('Second fact icon', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_two_icon'); ?>" name="<?php echo $this->get_field_name('fact_two_icon'); ?>" type="text" value="<?php echo $fact_two_icon; ?>" />
 	</p>	
 
 	<!-- fact three -->
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_three'); ?>"><?php _e('Third fact name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_three'); ?>"><?php _e('Third fact name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_three'); ?>" name="<?php echo $this->get_field_name('fact_three'); ?>" type="text" value="<?php echo $fact_three; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_three_max'); ?>"><?php _e('Third fact value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_three_max'); ?>"><?php _e('Third fact value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_three_max'); ?>" name="<?php echo $this->get_field_name('fact_three_max'); ?>" type="text" value="<?php echo $fact_three_max; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_three_icon'); ?>"><?php _e('Third fact icon', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_three_icon'); ?>"><?php _e('Third fact icon', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_three_icon'); ?>" name="<?php echo $this->get_field_name('fact_three_icon'); ?>" type="text" value="<?php echo $fact_three_icon; ?>" />
 	</p>	
 
 	<!-- fact four -->
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_four'); ?>"><?php _e('Fourth fact name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_four'); ?>"><?php _e('Fourth fact name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_four'); ?>" name="<?php echo $this->get_field_name('fact_four'); ?>" type="text" value="<?php echo $fact_four; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_four_max'); ?>"><?php _e('Fourth fact value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_four_max'); ?>"><?php _e('Fourth fact value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_four_max'); ?>" name="<?php echo $this->get_field_name('fact_four_max'); ?>" type="text" value="<?php echo $fact_four_max; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('fact_four_icon'); ?>"><?php _e('Fourth fact icon', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('fact_four_icon'); ?>"><?php _e('Fourth fact icon', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('fact_four_icon'); ?>" name="<?php echo $this->get_field_name('fact_four_icon'); ?>" type="text" value="<?php echo $fact_four_icon; ?>" />
 	</p>							
 

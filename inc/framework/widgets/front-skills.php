@@ -4,8 +4,8 @@ if ( !class_exists('Atframework_Skills') ) {
 class Atframework_Skills extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'atframework_skills_widget', 'description' => __( 'Show your visitors some of your skills.', 'astrid') );
-        parent::__construct(false, $name = __('Astrid FP: Skills', 'astrid'), $widget_ops);
+		$widget_ops = array('classname' => 'atframework_skills_widget', 'description' => __( 'Show your visitors some of your skills.', 'sinan') );
+        parent::__construct(false, $name = __('Sinan FP: Skills', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_skills_widget';
     }
 	
@@ -24,62 +24,62 @@ class Atframework_Skills extends WP_Widget {
 	?>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
 	</p>
 
 	<!-- skill one -->
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_one'); ?>"><?php _e('First skill name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_one'); ?>"><?php _e('First skill name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_one'); ?>" name="<?php echo $this->get_field_name('skill_one'); ?>" type="text" value="<?php echo $skill_one; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_one_max'); ?>"><?php _e('First skill value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_one_max'); ?>"><?php _e('First skill value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_one_max'); ?>" name="<?php echo $this->get_field_name('skill_one_max'); ?>" type="text" value="<?php echo $skill_one_max; ?>" />
 	</p>
 
 	<!-- skill two -->
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_two'); ?>"><?php _e('Second skill name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_two'); ?>"><?php _e('Second skill name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_two'); ?>" name="<?php echo $this->get_field_name('skill_two'); ?>" type="text" value="<?php echo $skill_two; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_two_max'); ?>"><?php _e('Second skill value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_two_max'); ?>"><?php _e('Second skill value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_two_max'); ?>" name="<?php echo $this->get_field_name('skill_two_max'); ?>" type="text" value="<?php echo $skill_two_max; ?>" />
 	</p>	
 
 	<!-- skill three -->
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_three'); ?>"><?php _e('Third skill name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_three'); ?>"><?php _e('Third skill name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_three'); ?>" name="<?php echo $this->get_field_name('skill_three'); ?>" type="text" value="<?php echo $skill_three; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_three_max'); ?>"><?php _e('Third skill value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_three_max'); ?>"><?php _e('Third skill value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_three_max'); ?>" name="<?php echo $this->get_field_name('skill_three_max'); ?>" type="text" value="<?php echo $skill_three_max; ?>" />
 	</p>
 
 	<!-- skill four -->
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_four'); ?>"><?php _e('Fourth skill name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_four'); ?>"><?php _e('Fourth skill name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_four'); ?>" name="<?php echo $this->get_field_name('skill_four'); ?>" type="text" value="<?php echo $skill_four; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_four_max'); ?>"><?php _e('Fourth skill value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_four_max'); ?>"><?php _e('Fourth skill value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_four_max'); ?>" name="<?php echo $this->get_field_name('skill_four_max'); ?>" type="text" value="<?php echo $skill_four_max; ?>" />
 	</p>
 							
 	<!-- skill five -->
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_five'); ?>"><?php _e('Fifth skill name', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_five'); ?>"><?php _e('Fifth skill name', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_five'); ?>" name="<?php echo $this->get_field_name('skill_five'); ?>" type="text" value="<?php echo $skill_five; ?>" />
 	</p>
 
 	<p>
-	<label for="<?php echo $this->get_field_id('skill_five_max'); ?>"><?php _e('Fifth skill value', 'astrid'); ?></label>
+	<label for="<?php echo $this->get_field_id('skill_five_max'); ?>"><?php _e('Fifth skill value', 'sinan'); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id('skill_five_max'); ?>" name="<?php echo $this->get_field_name('skill_five_max'); ?>" type="text" value="<?php echo $skill_five_max; ?>" />
 	</p>
 
