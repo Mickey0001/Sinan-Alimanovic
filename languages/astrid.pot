@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Astrid\n"
+"Project-Id-Version: Sinan\n"
 "POT-Creation-Date: 2017-01-06 13:35+0200\n"
 "PO-Revision-Date: 2017-01-06 13:35+0200\n"
 "Last-Translator: \n"
@@ -189,7 +189,7 @@ msgstr ""
 msgid ""
 "You can use any Google Fonts you want for the heading and/or body. See the "
 "fonts here: google.com/fonts. See the documentation if you need help with "
-"this: athemes.com/documentation/astrid"
+"this: athemes.com/documentation/Sinan"
 msgstr ""
 
 #: inc/customizer.php:262
@@ -351,7 +351,7 @@ msgid "5 minute setup"
 msgstr ""
 
 #: inc/demo-content/setup.php:56
-msgid "Welcome to Astrid"
+msgid "Welcome to Sinan"
 msgstr ""
 
 #: inc/demo-content/setup.php:57
@@ -419,7 +419,7 @@ msgid "Show a list of your clients."
 msgstr ""
 
 #: inc/framework/widgets/front-clients.php:12
-msgid "Astrid FP: Clients"
+msgid "Sinan FP: Clients"
 msgstr ""
 
 #: inc/framework/widgets/front-clients.php:27
@@ -487,7 +487,7 @@ msgid "Show your employees"
 msgstr ""
 
 #: inc/framework/widgets/front-employees.php:12
-msgid "Astrid FP: Employees"
+msgid "Sinan FP: Employees"
 msgstr ""
 
 #: inc/framework/widgets/front-employees.php:26
@@ -533,7 +533,7 @@ msgid "Show your visitors some facts about your company."
 msgstr ""
 
 #: inc/framework/widgets/front-facts.php:8
-msgid "Astrid FP: Facts"
+msgid "Sinan FP: Facts"
 msgstr ""
 
 #: inc/framework/widgets/front-facts.php:28
@@ -601,7 +601,7 @@ msgid "Show the latest news from your blog."
 msgstr ""
 
 #: inc/framework/widgets/front-posts.php:12
-msgid "Astrid FP: Latest News"
+msgid "Sinan FP: Latest News"
 msgstr ""
 
 #: inc/framework/widgets/front-posts.php:28
@@ -626,7 +626,7 @@ msgid "Show off your latest projects."
 msgstr ""
 
 #: inc/framework/widgets/front-projects.php:12
-msgid "Astrid FP: Projects"
+msgid "Sinan FP: Projects"
 msgstr ""
 
 #: inc/framework/widgets/front-projects.php:27
@@ -671,7 +671,7 @@ msgid "Show what services you are able to provide."
 msgstr ""
 
 #: inc/framework/widgets/front-services.php:12
-msgid "Astrid FP: Services"
+msgid "Sinan FP: Services"
 msgstr ""
 
 #: inc/framework/widgets/front-services.php:26
@@ -716,7 +716,7 @@ msgid "Show your visitors some of your skills."
 msgstr ""
 
 #: inc/framework/widgets/front-skills.php:8
-msgid "Astrid FP: Skills"
+msgid "Sinan FP: Skills"
 msgstr ""
 
 #: inc/framework/widgets/front-skills.php:33
@@ -764,7 +764,7 @@ msgid "Display your testimonials."
 msgstr ""
 
 #: inc/framework/widgets/front-testimonials.php:12
-msgid "Astrid FP: Testimonials"
+msgid "Sinan FP: Testimonials"
 msgstr ""
 
 #: inc/framework/widgets/front-testimonials.php:27
@@ -810,7 +810,7 @@ msgid "Recent posts with thumbnails"
 msgstr ""
 
 #: inc/framework/widgets/posts-widget.php:12
-msgid "Astrid: Recent Posts"
+msgid "Sinan: Recent Posts"
 msgstr ""
 
 #: inc/framework/widgets/posts-widget.php:116
@@ -831,7 +831,7 @@ msgid "Display your social profile"
 msgstr ""
 
 #: inc/framework/widgets/social-widget.php:6
-msgid "Astrid: Social Profile"
+msgid "Sinan: Social Profile"
 msgstr ""
 
 #: inc/framework/widgets/social-widget.php:52
@@ -861,7 +861,7 @@ msgid "Display a video from Youtube, Vimeo etc."
 msgstr ""
 
 #: inc/framework/widgets/video-widget.php:7
-msgid "Astrid: Video"
+msgid "Sinan: Video"
 msgstr ""
 
 #: inc/framework/widgets/video-widget.php:21
