@@ -16,7 +16,7 @@ body {
 	word-wrap: break-word;
 	line-height: 1.9;
 	letter-spacing: 1px;
-	background-color: #F5F9F8;
+	background-color: rgb(13,19,33) !important;
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
 }
@@ -338,6 +338,7 @@ select {
 }
 .btn-menu .fa {
 	cursor: pointer;	
+	color: rgb(227,188,90) !important;
 }
 .btn-submenu {
 	position: relative;
@@ -709,8 +710,8 @@ select {
 .hentry {
 	margin: 0;
 	padding: 60px;
-	background-color: #fff;
-	border: 1px solid #F2F2F3;
+	background-color: rgb(13,19,33);
+	border: 1px solid rgb(227,188,90);
 	margin-bottom: -1px;
 }
 
@@ -810,7 +811,7 @@ select {
 }
 .entry-title,
 .entry-title a {
-	color: #272727;
+	color: rgb(227,188,90);
 }
 .page .entry-title {
 	margin-bottom: 30px;
@@ -1448,7 +1449,7 @@ section.at-3-col {
 ## Structure
 --------------------------------------------------------------*/
 .site-title {
-	font-size: 36px;
+	font-size: 40px !important;
 	margin: 0;
 	letter-spacing: 1px;
 	line-height: 1.1;
@@ -1461,9 +1462,9 @@ section.at-3-col {
 }
 .site-description {
 	margin: 15px 0 0;
-	font-size: 14px;
-    color: #BDBDBD;
-}
+	font-size: 14.3px !important;
+    color: rgb(227,188,90) !important;
+} 
 .site-description:empty {
 	margin: 0;
 }
@@ -1473,13 +1474,13 @@ section.at-3-col {
 }
 .site-content > .container {
 	padding: 0;
-	background-color: #fff;
-	border-left: 1px solid #F2F2F3;
-	border-right: 1px solid #F2F2F3;
-	border-bottom: 1px solid #F2F2F3;
+	background-color: rgb(13,19,33) !important;
+	border-left: 1px solid rgb(13,19,33) !important;
+	border-right: 1px solid rgb(13,19,33) !important;
+	border-bottom: 1px solid rgb(13,19,33) !important;
 }
 body.page-template-page_widgetized {
-	background-color: #fff;
+	background-color: rgb(13,19,33);
 }
 .page-template-page_widgetized .site-content {
 	margin-top: 0;
@@ -1544,7 +1545,7 @@ body.page-template-page_widgetized {
 	width: 100%;
 	z-index: 999;
 	position: relative;
-	background-color: rgb(1,0,43);
+	background-color: rgb(1,0,43) !important;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;	
 	border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1554,8 +1555,8 @@ body.page-template-page_widgetized {
 	background-color: rgb(1,0,43);
 }
 .site-header.header-scrolled {
-	background-color: rgba(32, 37, 41, 0.9);
-	padding: 5px 0;
+	background-color: rgb(1,0,43) !important;
+	padding: 5px 0; 
 	border-bottom: 1px solid transparent;
 }
 .site-header .container {
@@ -1879,7 +1880,7 @@ body.page-template-page_widgetized {
 --------------------------------------------------------------*/
 .woocommerce .content-area {
 	float: right;
-	border-top: 1px solid #F2F2F3;
+	border-top: 1px solid rgb(227,188,90) !important;
 }
 .woocommerce .widget-area {
 	float: left;
