@@ -33,7 +33,7 @@
 
 	<header id="masthead" class="site-header <?php echo sinan_has_header(); ?>" role="banner">
 		<div class="container">
-			<div class="site-branding col-md-4 col-sm-6 col-xs-12">
+			<div class="site-branding col-md-6 col-sm-6 col-xs-12">
 				<?php sinan_branding(); ?>
 			</div>
 			<div class="btn-menu col-md-8 col-sm-6 col-xs-12"><i class="fa fa-navicon"></i></div>

@@ -231,7 +231,7 @@ select {
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
-	color: #F5F5DC;
+	color: rgb(227,188,90);
 	position: relative;
 	padding: 3px 0;
 	z-index: 11;	
@@ -361,7 +361,7 @@ select {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #202529;
+    background-color: rgb(1,0,43);
     padding-left: 0;
     padding-right: 0;
 }
@@ -1291,7 +1291,7 @@ section.at-3-col {
 .employee-title {
 	margin: 0 0 30px;
 	padding: 15px;
-	background-color: #202529;
+	background-color: rgb(1,0,43);
 }
 .employee-title a {
 	color: #fff;
@@ -1452,10 +1452,11 @@ section.at-3-col {
 	margin: 0;
 	letter-spacing: 1px;
 	line-height: 1.1;
+	color:  rgb(227,188,90);
 }
 .site-title a,
 .site-title a:hover {
-	color: #F5F5DC;
+	color:  rgb(227,188,90) !important;
 	text-decoration: none;
 }
 .site-description {
@@ -1543,14 +1544,14 @@ body.page-template-page_widgetized {
 	width: 100%;
 	z-index: 999;
 	position: relative;
-	background-color: #202529;
+	background-color: rgb(1,0,43);
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;	
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .site-header.has-header,
 .site-header.has-video {
-	background-color: transparent;
+	background-color: rgb(1,0,43);
 }
 .site-header.header-scrolled {
 	background-color: rgba(32, 37, 41, 0.9);
@@ -1579,7 +1580,7 @@ body.page-template-page_widgetized {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(37, 46, 53, 0.9);
+	/* background-color: rgba(37, 46, 53, 0.9); */
 }
 .header-info {
 	width: 100%;
@@ -1614,7 +1615,7 @@ body.page-template-page_widgetized {
 .footer-widgets,
 .site-footer,
 .footer-info {
-	background-color: #202529;
+	background-color: rgb(1,0,43) !important;
 	clear: both;
 }
 .footer-widgets {
@@ -1627,7 +1628,7 @@ body.page-template-page_widgetized {
 .footer-widgets a,
 .footer-info a,
 .site-footer a {
-	color: #F5F5DC;
+	color: rgb(227,188,90);
 }
 .site-footer a:hover,
 .footer-info a:hover,
@@ -1637,7 +1638,7 @@ body.page-template-page_widgetized {
 }
 .footer-widgets .widget-title {
 	margin: 0 0 30px;
-	color: #fff;
+	color: rgb(227,188,90);
 }
 .footer-widgets .widget {
 	margin: 25px 0;
@@ -2171,7 +2172,7 @@ body.page-template-page_widgetized {
 	.site-header.has-video,
 	.site-header.has-header {
 		position: relative;
-		background-color: #202529;
+		background-color: rgb(1,0,43);
 	}
     .site-header {
         position: relative !important;
