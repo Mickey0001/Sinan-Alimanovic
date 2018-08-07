@@ -26,6 +26,7 @@
 				<?php sinan_footer_branding(); ?>
 				<?php sinan_footer_contact(); ?>
 			</div>
+		
 		</div>
 		<?php endif; ?>
 
@@ -35,6 +36,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'footer', 'depth' => '1', 'menu_id' => 'footer-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<div class="site-copyright">
+				<p ><?php bloginfo('description'); ?></p>
 					&copy; <?php echo date('Y'); ?> SinanAlimanovic.com
 				</div>
 			</div><!-- .site-info -->

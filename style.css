@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	color: #656D6D;
+	color: rgb(227,188,90);
 	word-wrap: break-word;
 	line-height: 1.9;
 	letter-spacing: 1px;
@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #272727;
+	color: rgb(227,188,90);
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 300;
 	margin-top: 20px;
@@ -512,7 +512,7 @@ select {
 }
 .widget-area .widget,
 .widget-area .widget a {
-	color: #656D6D;
+	color: rgb(227,188,90);
 }
 .widget-area .widget-title {
 	text-transform: uppercase;
