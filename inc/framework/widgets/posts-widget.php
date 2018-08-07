@@ -9,7 +9,7 @@ class Atframework_Recent_Posts extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array('classname' => 'widget_recent_posts', 'description' => __( 'Recent posts with thumbnails', 'sinan') );
-		parent::__construct('atframework-recent-posts', __('Astrid: Recent Posts', 'sinan'), $widget_ops);
+		parent::__construct('atframework-recent-posts', __('Sinan: Recent Posts', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'widget_recent_entries';
 	}
 

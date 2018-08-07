@@ -9,7 +9,7 @@ class Atframework_Employees extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array('classname' => 'atframework_employees_widget', 'description' => __( 'Show your employees', 'sinan') );
-        parent::__construct(false, $name = __('Astrid FP: Employees', 'sinan'), $widget_ops);
+        parent::__construct(false, $name = __('Sinan FP: Employees', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_employees_widget';
 			
     }

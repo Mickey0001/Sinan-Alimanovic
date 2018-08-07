@@ -2,7 +2,7 @@
 /**
  * Posts widget
  *
- * @package Astrid
+ * @package Sinan
  */
 
 class Atframework_Posts extends WP_Widget {

@@ -53,7 +53,7 @@ function sinan_set_after_import_mods() {
 
     //Set header text and button
     set_theme_mod( 'header_text', __('5 minute setup', 'sinan') );
-    set_theme_mod( 'header_subtext', __('Welcome to Astrid', 'sinan') );
+    set_theme_mod( 'header_subtext', __('Welcome to Sinan', 'sinan') );
     set_theme_mod( 'header_button', __('Explore', 'sinan') );
     set_theme_mod( 'header_button_url', '#primary' );
 

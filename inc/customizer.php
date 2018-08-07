@@ -1,6 +1,6 @@
 <?php
 /**
- * Astrid Theme Customizer.
+ * Sinan Theme Customizer.
  *
  * @package Sinan
  */
@@ -15,7 +15,7 @@ function sinan_customize_register( $wp_customize ) {
 
 
     //Titles
-    class Astrid_Info extends WP_Customize_Control {
+    class Sinan_Info extends WP_Customize_Control {
         public $type = 'info';
         public $label = '';
         public function render_content() {
@@ -655,7 +655,7 @@ function sinan_customize_register( $wp_customize ) {
             'sanitize_callback' => 'esc_attr',            
         )
     );
-    $wp_customize->add_control( new Astrid_Info( $wp_customize, 'footer_contact', array(
+    $wp_customize->add_control( new Sinan_Info( $wp_customize, 'footer_contact', array(
         'label' => __('Contact', 'sinan'),
         'section' => 'sinan_footer',
         'settings' => 'sinan_options[info]',

@@ -9,7 +9,7 @@ class Atframework_Testimonials extends WP_Widget {
 
 	public function __construct() {
 		$widget_ops = array('classname' => 'atframework_testimonials_widget', 'description' => __( 'Display your testimonials.', 'sinan') );
-        parent::__construct(false, $name = __('Astrid FP: Testimonials', 'sinan'), $widget_ops);
+        parent::__construct(false, $name = __('Sinan FP: Testimonials', 'sinan'), $widget_ops);
 		$this->alt_option_name = 'atframework_testimonials_widget';
 			
     }
