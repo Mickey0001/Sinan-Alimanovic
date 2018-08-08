@@ -490,6 +490,9 @@ select {
 	margin-right: auto;
 }
 
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+	background: transparent !important;
+}
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1459,10 +1462,22 @@ section.at-3-col {
 .site-title a:hover {
 	color:  rgb(227,188,90) !important;
 	text-decoration: none;
+	/* text-shadow: 1.5px 1.5px #a67c00; */
+	text-shadow: 1.5px 1.5px #127cc0;
 }
+.site-title-footer{
+	text-shadow: 1.5px 1.5px #127cc0;
+	font-weight: 700;
+}
+
+.site-title::first-letter { 
+	font-size: 100%;
+	font-weight: 700;
+}
+
 .site-description {
 	margin: 15px 0 0;
-	font-size: 14.3px !important;
+	font-size: 12.6px !important;
     color: rgb(227,188,90) !important;
 } 
 .site-description:empty {

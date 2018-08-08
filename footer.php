@@ -36,9 +36,9 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'footer', 'depth' => '1', 'menu_id' => 'footer-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<div class="site-copyright">
-				<p ><?php bloginfo('description'); ?></p>
-					&copy; <?php echo date('Y'); ?> SinanAlimanovic.com
+				<p ><?php bloginfo('description'); ?></p>			
 				</div>
+				<p style="text-align: center;">&copy; <?php echo date('Y'); ?> SinanAlimanovic.com</p>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div>
