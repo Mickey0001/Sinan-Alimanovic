@@ -505,3 +505,51 @@ require get_template_directory() . '/inc/demo-content/setup.php';
  * Woocommerce
  */
 require get_template_directory() . '/woocommerce/woocommerce.php';
+
+//Images Slider
+function themename_slider_home_images_setup($wp_customize)
+{
+    $wp_customize->add_section('home-slider-images', array(
+        'title' => 'Home Slider',
+		));
+		
+		$wp_customize->add_setting('home-slider-first-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'home-slider-first-image',
+            array(
+                'label'      => __( 'First Image', 'theme_name' ),
+                'section'    => 'home-slider-images',
+                'settings'   => 'home-slider-first-image'
+            )
+        )
+		);
+		
+		$wp_customize->add_setting('home-slider-second-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'home-slider-second-image',
+            array(
+                'label'      => __( 'Second Image', 'theme_name' ),
+                'section'    => 'home-slider-images',
+                'settings'   => 'home-slider-second-image'
+            )
+        )
+		);
+		
+		$wp_customize->add_setting('home-slider-third-image');
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'home-slider-third-image',
+            array(
+                'label'      => __( 'Third Image', 'theme_name' ),
+                'section'    => 'home-slider-images',
+                'settings'   => 'home-slider-third-image'
+            )
+        )
+    );
+}
+add_action('customize_register', 'themename_slider_home_images_setup');
