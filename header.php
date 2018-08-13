@@ -42,7 +42,7 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-
+	<?php include('slider.php'); ?>
 	<?php $sinan_has_header = sinan_has_header(); ?>
 	<?php if ( $sinan_has_header == 'has-header' ) : ?>
 	<div class="header-image">
@@ -81,5 +81,6 @@
 
 	<div id="content" class="site-content">
 		<div class="<?php echo $container; ?>">
+
 		
-	<?php include('slider.php'); ?>
+
