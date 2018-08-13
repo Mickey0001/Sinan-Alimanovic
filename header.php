@@ -81,3 +81,5 @@
 
 	<div id="content" class="site-content">
 		<div class="<?php echo $container; ?>">
+		
+	<?php include('slider.php'); ?>
