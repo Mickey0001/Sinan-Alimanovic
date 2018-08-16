@@ -22,15 +22,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img style="height:100vh; margin-top:60px; width:100%; padding-top:50px;" src="<?php echo get_theme_mod('home-slider-first-image');?>" alt="Los Angeles" >
+        <img style="height:100vh; margin-top:60px; width:100%; padding-top:50px;" src="<?php echo get_theme_mod('home-slider-first-image');?>" alt="Sinan" >
       </div>
 
       <div class="item header-image">
-        <img style="height:100vh; margin-top:50px; width:100%; padding-top:50px; "  src="<?php echo get_theme_mod('home-slider-second-image');?>" alt="Chicago" >
+        <img style="height:100vh; margin-top:50px; width:100%; padding-top:50px; "  src="<?php echo get_theme_mod('home-slider-second-image');?>" alt="Sinan" >
       </div>
     
       <div class="item header-image">
-        <img style="height:100vh; margin-top:50px; width:100%; padding-top:50px; " src="<?php echo get_theme_mod('home-slider-third-image');?>" alt="New york" >
+        <img style="height:100vh; margin-top:50px; width:100%; padding-top:50px; " src="<?php echo get_theme_mod('home-slider-third-image');?>" alt="Sinan" >
       </div>
     </div>
 
