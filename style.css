@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: rgb(227,188,90);
+	color: rgb(12,124,192) !important;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 300;
 	margin-top: 20px;
@@ -49,6 +49,13 @@ p {
 }
 h4 {
 	font-size: 16px;
+}
+.carousel-indicators {
+	color: #fcd088 !important;
+	border-color: #fcd088;
+}
+.carousel-indicators .active {
+	background: #fcd088 !important;
 }
 /*--------------------------------------------------------------
 # Tables
@@ -224,32 +231,18 @@ select {
 	float: left;
 	position: relative;
 	padding: 10px 20px;
-	font-size: 14px;
+	font-size: 12px;
 	letter-spacing: 2px;
 }
 
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
-	color: rgb(227,188,90);
+	color: rgb(12,124,192);
 	position: relative;
 	padding: 3px 0;
 	z-index: 11;	
-}
-.main-navigation li a::before,
-.main-navigation li a::after {
-	width: 0;
-	content: '';
-	position: absolute;	
-	bottom: 0;
-	z-index: -1;
-	height: 100%;
-	-webkit-transition: width 0.5s;
-	transition: width 0.5s;	
-}
-.main-navigation li a::before {
-	right: 0;
-	border-top: 1px solid #fcd088;
+
 }
 .main-navigation ul ul ul { 
 	top: 0 !important;
@@ -1544,12 +1537,15 @@ body.page-template-page_widgetized {
 	margin-left: -1px;
 	margin-right: -1px;
 }
+.page-header {
+	border-bottom: 1px solid rgb(12,124,192) !important;
+}
 .page-header .page-title {
 	padding: 0 60px;
 }
 .page-header .page-title .fa {
 	margin-right: 15px;
-	color: rgb(227,188,90) !important;
+	color: rgb(12,124,192) !important;
 }
 
 /*--------------------------------------------------------------
