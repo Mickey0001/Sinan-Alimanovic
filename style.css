@@ -1507,7 +1507,7 @@ body.page-template-page_widgetized {
     margin: 0 auto;
 }
 .content-area {
-	width: 811px;
+	width:80%;
 	float: left;
 	margin-left: -1px;
 }
@@ -1532,7 +1532,7 @@ body.page-template-page_widgetized {
 	margin-left: 0;
 }
 .widget-area {
-	width: 360px;
+	width: 20%;
 	float: left;
 	margin-left: -1px;
 	margin-right: -1px;
