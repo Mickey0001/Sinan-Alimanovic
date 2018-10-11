@@ -404,17 +404,18 @@ if (!function_exists('sinan_footer_contact')):
         echo '<div class="footer-contact">';
         if ($footer_contact_address) {
             echo '<div class="footer-contact-block">';
-            echo '<i class="fa fa-facebook-square"></i>';
-            echo '<i class="fa fa-instagram"></i>';
-            echo '<i class="fa fa-youtube-play"></i>';
-            echo '<i class="fa fa-spotify"></i>';
+            echo '<a href="https://www.facebook.com/SinanAlimanovich" target="_blank"><i class="fa fa-facebook-square"></i></a>';
+            echo '<a href="https://www.instagram.com/explore/tags/sinanalimanovic" target="_blank"><i class="fa fa-instagram"></i></a>';
+            echo '<a href="https://www.youtube.com/watch?v=16OCCZsUwVE" target="_blank"><i class="fa fa-youtube-play"></i></a>';
+            echo '<a href="https://www.spotify.com/int/why-not-available" target="_blank"><i class="fa fa-spotify"></i></a>';
+            echo '<a href="https://en.wikipedia.org/wiki/Sinan_Alimanovi%C4%87" target="_blank"><i class="fa fa-wikipedia-w" aria-hidden="true"></i></a> ';
             echo '<span>' . esc_html($footer_contact_address) . '</span>';
             echo '</div>';
         }
         if ($footer_contact_email) {
             echo '<div class="footer-contact-block">';
             echo '<i class="fa fa-envelope"></i>';
-            echo '<span><a href="/kontakt' . esc_attr($footer_contact_email) . '">' . esc_html($footer_contact_email) . '</a></span>';
+            echo '<span><a href="kontakt">Contact</a></span>';
             echo '</div>';
         }
         if ($footer_contact_phone) {
