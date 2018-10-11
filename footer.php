@@ -38,7 +38,7 @@
 				<div class="site-copyright">
 				<p ><?php bloginfo('description');?></p>
 				</div>
-				<p style="text-align: center; color:rgb(12,124,192);">&copy; <?php echo date('Y'); ?> SinanAlimanovic.com</p>
+				<p style="text-align: center; color:rgb(12,124,192); margin-top: 50px;">&copy; <?php echo date('Y'); ?> SinanAlimanovic.com</p>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div>
